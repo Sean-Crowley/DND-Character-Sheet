@@ -250,6 +250,7 @@ async function boot() {
   state.spellDB = data.spellDB;
   state.illusionList = data.illusionList;
   state.surge = data.surge;
+  state.portraitImg = data.portraitImg;
   state.portraitSVG = data.portraitSVG;
   state.seed = data.seed;
 

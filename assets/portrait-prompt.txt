@@ -1,7 +1,69 @@
-Photoreal cinematic portrait of "Kaelaxis," an ancient starfaring admiral who outwardly appears to be a distinguished man in his late 40s but whose eyes betray millennia of weariness. Bust/chest-up framing, three-quarter view, subtle downward tilt of the head. He has swept-back silvering hair with a slightly receding hairline, a neatly kept silver goatee and light stubble, high cheekbones, worry lines etched faintly across his forehead, and heavy hooded eyelids with pronounced under-eye shadows — a face that has seen too much. His irises glow with a faint bioluminescent gradient shifting from cyan (#35E4FF) to magenta (#FF3DCB), the only overt sign of his true age and arcane nature.
+KAELAXIS — AI PORTRAIT PROMPT
+(Facial features inspired by classic naval-admiral & imperial-marshal concept art:
+ distinguished, weathered, silver-bearded, stern and world-weary.)
 
-Costume: a hybrid garment fusing a high-collared naval admiral's dress coat with a sorcerer's robe — deep midnight-indigo and violet fabric (#1E1140 / #0B0620) with heavy gold-braid epaulettes and gold-thread fringe on the shoulders, a double row of polished gold buttons, and gold-trimmed lapels. Woven into the robe are faintly glowing cyan and magenta arcane runes and sigils that read like embroidered constellations. Over it all drapes a stealthy shadow cloak of near-black light-absorbing cloth with a hood casting a soft shadow across his brow; a glowing gemstone clasp (cyan-to-magenta) fastens it at the throat.
+=== FULL PROMPT ===
+Semi-realistic fantasy character portrait, painterly digital concept art, of "Kaelaxis," an ancient
+Wild-Magic sorcerer and starfaring fleet admiral. He reads as a distinguished, weathered man in his
+late 40s to mid-50s, but his eyes carry the weariness of someone far older.
 
-Setting/lighting: he stands on the command deck against the void of deep space — a midnight-indigo nebula background (#0B0620 base) glowing with distant magenta and cyan gas clouds and a scattering of stars. Behind and to either side, two colossal starships hang in the dark, their hulls edged in gold running-lights (#FFD447) and cyan/magenta engine glow, slightly out of focus. Dramatic rim lighting: cool cyan key light from one side, warm magenta from the other, gold accent light catching the braid — chromatic edge-glow separating him from the dark. Soft volumetric glow, faint floating arcane motes of light around him, gentle atmospheric haze, cinematic depth of field, subtle lens vignette.
+POSE & FRAMING: chest-up / bust portrait, centered. His torso is turned slightly to his left in a
+three-quarter view; his head is turned back to face the viewer with a direct, level, commanding gaze
+and his chin lowered just slightly. Shoulders squared and upright — still, composed, authoritative.
+He stands with his ARMS FOLDED across his chest, right forearm crossed over the left, hands tucked; the
+ornate gauntleted right hand rests in view on his opposite upper arm so the gauntlet reads clearly.
 
-Style: hyperrealistic digital painting / photoreal concept art, dramatic sci-fi-fantasy, moody and elegant, high detail on skin texture and fabric, tasteful bloom on the glowing elements. Color palette strictly "Arcane Void": #0B0620, #1E1140, #FF3DCB, #35E4FF, #FFD447. Portrait orientation, 4:5 aspect ratio. No text, no watermark.
+FACE (the focus): a strong, lined, weathered face with high cheekbones, a strong straight nose, and a
+firm jaw. Short silver-grey hair, neatly combed back and receding at the temples. A full, neatly
+groomed beard and mustache in salt-and-pepper silver-white that frames the jaw. Deep-set, heavy-lidded
+eyes beneath a furrowed, expressive brow, with pronounced under-eye shadows and fine crow's feet — a
+stern, commanding expression with a trace of ancient sorrow, mouth set in a hard, level line. Faint
+horizontal lines across the forehead. His irises hold a subtle otherworldly luminance, a faint
+cyan-to-magenta glow deep in the pupils — the only overt sign of his unnatural age and arcane power.
+
+COSTUME: a dark naval admiral's dress uniform reimagined as a sorcerer's regalia — a high-collared,
+double-breasted greatcoat in deep midnight-indigo/near-black with subtle violet sheen, a stand-up collar
+bearing small silver stars, gold rank rings on the cuffs, heavy gold-braid epaulettes and looping gold
+aiguillette cords across the chest, polished buttons, and a deep-red sash with gold trim. A few
+understated medals, one a gold star set with a small red gem. Faint glowing arcane runes and
+constellation-like embroidery are woven into the fabric in muted cyan and magenta. A stealthy near-black
+shadow cloak drapes from one shoulder.
+
+SIGNATURE RELICS (subtle, not gaudy): an ornate armored gauntlet on his right hand — dark half-plate with
+a glowing central gem, wreathed in faint shifting chromatic light. A cursed gem is fused into his chest,
+glowing dimly through the coat, and a deep crimson glow emanates faintly from his sternum where a magical
+orb replaced his heart. A whisper of unstable multicolored wild-magic energy curls at the edges of frame.
+
+BACKGROUND (keep it simple and clean — no objects): a plain dark studio-style backdrop, a smooth
+gradient of deep midnight-indigo (#0B0620) at the edges fading to a slightly warmer violet-charcoal
+directly behind him. A soft ambient bloom of faint cyan and magenta light glows behind his head and
+shoulders to separate him from the dark. Low drifting wisps of atmospheric haze/smoke near the bottom,
+and a barely-there scatter of tiny faint stars in the darkness — just enough to whisper "the void of
+space" WITHOUT a literal nebula or any ships. Corners darkened by a soft vignette. Absolutely no
+buildings, ships, machinery, or busy detail behind him — the background stays quiet so the face reads.
+
+LIGHT: moody, dramatic studio lighting — a cool cyan key light on one side of his face, a softer warm
+magenta accent on the other, and a subtle gold rim light catching his hair and the coat's braid to lift
+him off the dark. Rich shadows, restrained glow, cinematic depth of field with the background softly
+out of focus.
+
+STYLE: painterly semi-realistic fantasy concept art (in the spirit of high-end character splash art),
+moody and elegant, highly detailed skin texture and fabric, muted rich color with tasteful glow accents.
+Palette: deep indigo/violet base with cyan, magenta, and gold highlights. Portrait orientation, 4:5
+aspect ratio. No text, no watermark.
+
+=== SHORT PROMPT (for length-limited tools) ===
+Painterly semi-realistic fantasy portrait of Kaelaxis — a weathered, distinguished fleet admiral and
+ancient sorcerer, late-40s/50s look. Strong lined face, high cheekbones, silver swept-back receding hair,
+full salt-and-pepper silver beard and mustache, deep-set heavy-lidded weary eyes with a faint cyan-magenta
+glow, furrowed brow, stern commanding expression. Dark midnight-indigo admiral's greatcoat with silver
+star collar, gold cuff rings, gold-braid epaulettes and aiguillette cords, deep-red sash, subtle arcane
+runes, black shadow cloak. Ornate glowing gauntlet on his right hand, faint gem glowing in his chest,
+red glow at his heart, wisps of chaotic wild magic. Arms folded across his chest, gauntleted right hand
+in view; upright three-quarter pose, direct commanding gaze. Plain dark indigo-to-violet studio backdrop
+with a soft cyan/magenta glow behind him and a hint of low haze — NO ships, no clutter. Moody cinematic
+lighting: cyan key + magenta accent + gold rim. 4:5, no text.
+
+=== NEGATIVE PROMPT ===
+text, watermark, logo, extra fingers, deformed hands, low detail, cartoonish, anime, bright cheerful
+lighting, modern clothing, smiling, young/smooth face, neon overload, cluttered background

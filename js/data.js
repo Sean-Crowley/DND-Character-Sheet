@@ -20,11 +20,15 @@ export async function loadData() {
 
   const illusionList = illusions.slice().sort((a, b) => a.level - b.level || a.name.localeCompare(b.name));
 
-  // portrait svg (optional)
-  let portraitSVG = "";
-  try { const r = await fetch(new URL("../assets/portrait.svg", import.meta.url).href); if (r.ok) portraitSVG = await r.text(); } catch (_) {}
+  // portrait: prefer a raster image (portrait.png) if present, else the SVG placeholder
+  let portraitImg = "", portraitSVG = "";
+  const imgUrl = new URL("../assets/portrait.png", import.meta.url).href;
+  try { const ri = await fetch(imgUrl, { method: "HEAD" }); if (ri.ok) portraitImg = imgUrl; } catch (_) {}
+  if (!portraitImg) {
+    try { const r = await fetch(new URL("../assets/portrait.svg", import.meta.url).href); if (r.ok) portraitSVG = await r.text(); } catch (_) {}
+  }
 
-  return { seed: character, spellDB, illusionList, surge, portraitSVG };
+  return { seed: character, spellDB, illusionList, surge, portraitImg, portraitSVG };
 }
 
 export function lookupSpell(spellDB, name) {

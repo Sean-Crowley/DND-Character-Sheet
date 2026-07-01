@@ -334,8 +334,10 @@ function journal(ch) {
 }
 
 /* ---------------- portrait / story ---------------- */
-function story(ch, portraitSVG) {
-  const art = portraitSVG ? `<div class="portrait-frame">${portraitSVG}</div>` : "";
+function story(ch, portraitImg, portraitSVG) {
+  const art = portraitImg
+    ? `<div class="portrait-frame"><img src="${esc(portraitImg)}" alt="Kaelaxis"></div>`
+    : portraitSVG ? `<div class="portrait-frame">${portraitSVG}</div>` : "";
   return panel("Kaelaxis", `
     ${art}
     <h3 class="sub">Languages</h3><input class="field-input" data-path="languages" value="${esc((ch.languages || []).join(", "))}">`, "☾");
@@ -357,7 +359,7 @@ function panel(title, bodyHTML, flourish = "") {
 }
 
 export function renderApp(root, ctx) {
-  const { character: ch, derived: d, spellDB, illusionList, portraitSVG, status } = ctx;
+  const { character: ch, derived: d, spellDB, illusionList, portraitImg, portraitSVG, status } = ctx;
   root.innerHTML = `
     ${topbar(ch, d, status)}
     <div class="grid">
@@ -378,7 +380,7 @@ export function renderApp(root, ctx) {
         ${items(ch, d)}
       </div>
       <div class="col col-c">
-        ${story(ch, portraitSVG)}
+        ${story(ch, portraitImg, portraitSVG)}
         ${spells(ch, d, spellDB)}
         ${features(ch)}
       </div>
