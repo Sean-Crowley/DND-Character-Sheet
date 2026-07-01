@@ -33,10 +33,12 @@ eq("CHA save (proficient)", d.saves.cha.total, 10);
 eq("STR save (not prof)", d.saves.str.total, -1);
 eq("DEX save (not prof)", d.saves.dex.total, 2);
 
-eq("Arcana (prof, INT)", d.skills.arcana.total, 4);
+eq("Acrobatics (prof, DEX)", d.skills.acrobatics.total, 7);
+eq("Animal Handling (prof, WIS)", d.skills.animalHandling.total, 5);
 eq("Deception (prof, CHA)", d.skills.deception.total, 10);
 eq("Persuasion (prof, CHA)", d.skills.persuasion.total, 10);
 eq("Insight (prof, WIS)", d.skills.insight.total, 5);
+eq("Arcana (not prof, INT)", d.skills.arcana.total, -1);
 eq("Athletics (not prof, STR)", d.skills.athletics.total, -1);
 eq("Stealth (not prof, DEX)", d.skills.stealth.total, 2);
 

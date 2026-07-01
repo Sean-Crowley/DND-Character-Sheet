@@ -19,7 +19,7 @@
 
   "proficiencies": {
     "saves": ["con", "cha"],
-    "skills": ["arcana", "deception", "insight", "persuasion"],
+    "skills": ["acrobatics", "animalHandling", "insight", "deception", "persuasion"],
     "expertise": [],
     "armorTraining": [],
     "weapons": ["Simple weapons"],
@@ -127,7 +127,7 @@
     "attuned": true,
     "senses": "Blindsight 120 ft",
     "grants": ["Blindsight 120 ft", "Advantage on Deception checks", "Serves as a spellcasting focus"],
-    "weapon": { "name": "Godsgrasp Strike", "ability": "dex", "damageDice": "3d6", "damageType": "force", "note": "Attack and damage use your Dexterity. (Damage type set to force — verify with DM.)" },
+    "weapon": { "name": "Godsgrasp Strike", "ability": "dex", "damageDice": "3d6", "damageType": "piercing", "note": "Attack and damage use your Dexterity." },
     "charges": { "current": 9, "max": 9, "recharge": "dawn" },
     "illusionCasting": { "costRule": "spellLevel", "cantripCost": 1, "useOwnStats": true, "note": "Spend charges equal to the spell's level (cantrips cost 1) to cast ANY illusion spell — even ones you don't know or that aren't on the Sorcerer list. Saves/attacks use your own Spell Save DC and CHA spell attack." },
     "lore": "A gauntlet claimed from a distant planet, forged from the essence of powerful beings — it steals faces, and with them, illusions. Kaelaxis wears it on his right hand.",
@@ -249,7 +249,7 @@
 
   "journal": [],
 
-  "languages": ["Common", "Sumptous", "Extravaganza", "Gobbly gook", "Costco"],
+  "languages": ["Common", "Abyssal"],
 
   "appearance": "An older gentleman who appears to be in his late 40s — though in truth he is ancient and simply stopped aging in body. Kaelaxis is the admiral who commands two massive spaceships and the whole fleet aboard them. He wears an admiral's coat with the arcane touch of a sorcerer's robe woven through it, over the stealthy Cloak of Shadows. His eyes are heavy and weary; they have seen far too much.",
 
@@ -258,11 +258,8 @@
   "worldNotes": "Veral · Pontushum · 6 mermath — Alip · Tesh rules the desert · selarium.\nAll-in-None (Dragon of No Colors). Panicle is God of Lyrathy / Tesh. Arbend draws power from the All-in-None (maybe). The Death God infects people. Avish and Tesh are at war. Keleklasts. Alignment territory. Witch / Warden avatar. 'Gel we could act like Gods.' Eggs in the deep cellar in a major town.",
 
   "reviewFlags": [
-    "Skill proficiencies defaulted to Arcana, Deception, Insight, Persuasion — verify against your real sheet.",
-    "Languages transcribed literally from the old sheet (Sumptous / Extravaganza / Gobbly gook / Costco) — correct if these were jokes/placeholders.",
-    "Godsgrasp strike damage type set to 'force' — set the real type.",
-    "Cursed Gem 'spell level +1 sorcery points' note left OFF pending confirmation.",
-    "Helmet from the Lay effect is TBD.",
+    "Cursed Gem 'spell level +1 sorcery points' note left OFF (user unsure; keep off unless confirmed).",
+    "Helmet from the Lay effect is TBD (user to define with DM).",
     "World notes were OCR-garbled on the original sheet; cleaned lightly — fix names as needed."
   ]
 }
