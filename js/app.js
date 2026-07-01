@@ -4,6 +4,7 @@ import { computeDerived } from "./calc.js";
 import { renderApp } from "./render.js";
 import { initTooltips } from "./tooltips.js";
 import { mountRoller, rollCheck, rollExpr } from "./roller.js";
+import { mountCast, setCastContext, openCast } from "./cast.js";
 import * as store from "./storage.js";
 
 const state = { character: null, spellDB: {}, illusionList: [], surge: [], portraitSVG: "", status: { cls: "", msg: "" } };
@@ -30,6 +31,7 @@ function rerender() {
   const selEnd = isField && active.selectionEnd != null ? active.selectionEnd : null;
 
   const derived = computeDerived(state.character);
+  setCastContext({ spellAttack: derived.spellAttack, spellSaveDC: derived.spellSaveDC, innate: !!(state.character.toggles && state.character.toggles.innateSorcery && state.character.toggles.innateSorcery.on) });
   renderApp(root, { ...state, derived });
 
   if (focusPath) {
@@ -86,6 +88,32 @@ const actions = {
     rollCheck(el.dataset.label || "Roll", mod, mode);
   },
   rollexpr(el) { rollExpr(el.dataset.expr, el.dataset.label); },
+
+  cast(el) { openCast(el.dataset.spell, lookupSpell(state.spellDB, el.dataset.spell)); },
+
+  createslot(el) {
+    const lvl = el.dataset.level, cost = Number(el.dataset.cost);
+    const sp = state.character.resources && state.character.resources.sorceryPoints;
+    if (!sp) return;
+    if ((sp.current || 0) < cost) return flash(`Need ${cost} Sorcery Points (have ${sp.current || 0}).`);
+    const slot = (state.character.spellSlots ||= {})[lvl];
+    if (!slot || (slot.expended || 0) <= 0) return flash(`No expended L${lvl} slot to recover.`);
+    sp.current -= cost; slot.expended -= 1;
+    flash(`Created a Level ${lvl} slot for ${cost} SP.`); change();
+  },
+
+  respip(el) {
+    const key = el.dataset.res, idx = Number(el.dataset.index);
+    const r = state.character.resources && state.character.resources[key]; if (!r) return;
+    const cur = r.current || 0; r.current = (idx < cur) ? idx : idx + 1; change();
+  },
+
+  "flavor-add"() {
+    const input = document.getElementById("flavorAdd"); if (!input) return;
+    const v = input.value.trim(); if (!v) return;
+    (state.character.flavorInventory ||= []).push(v); change();
+  },
+  "flavor-del"(el) { (state.character.flavorInventory || []).splice(Number(el.dataset.index), 1); change(); },
 
   adjust(el) { clampInc(el.dataset.path, Number(el.dataset.delta), el.dataset.max); change(); },
 
@@ -210,8 +238,10 @@ function onInput(e) {
 function onKey(e) {
   if (e.key === "Escape") {
     document.getElementById("surgeOverlay")?.classList.remove("open");
+    document.getElementById("castOverlay")?.classList.remove("open");
     document.getElementById("rollerPanel")?.classList.remove("open");
   }
+  if (e.key === "Enter" && e.target.id === "flavorAdd") { e.preventDefault(); actions["flavor-add"](); }
 }
 
 /* ---------- boot ---------- */
@@ -234,6 +264,7 @@ async function boot() {
     getItem: (id) => (state.character.items || []).find(i => i.id === id)
   });
   mountRoller(state.surge);
+  mountCast();
 
   document.addEventListener("click", onClick);
   document.addEventListener("change", onChange);

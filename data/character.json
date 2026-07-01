@@ -137,10 +137,9 @@
   "items": [
     {
       "id": "cursed-gem", "name": "Cursed Gem", "category": "fused", "rarity": "Artifact (planetary)", "attunement": false, "attuned": true, "isFocus": true,
-      "effects": ["+1 to spell attack rolls (always)", "+1 to spell save DC (always)", "Spellcasting focus"],
+      "effects": ["+1 to spell attack rolls (always)", "+1 to spell save DC (always)", "Font of Magic: convert Sorcery Points into spell slots for 1 fewer point (up to a 5th-level slot)", "Spellcasting focus"],
       "charges": null,
-      "description": "A cursed gem fused into Kaelaxis's chest — one of the planetary-infused relics formed from the essence of powerful beings. It permanently grants +1 to his spell attack rolls and +1 to his spell save DC, and serves as a spellcasting focus. Being part of his body, it needs no attunement slot.",
-      "reviewNote": "The old sheet also noted 'spell level +1 sorcery points gained' next to the gem — mechanic unconfirmed; verify with your DM before enabling."
+      "description": "A cursed gem fused into Kaelaxis's chest — one of the planetary-infused relics formed from the essence of powerful beings. It permanently grants +1 to his spell attack rolls and +1 to his spell save DC; lets him use Font of Magic to convert Sorcery Points into spell slots for 1 fewer point than normal (1/2/4/5/6 points for a 1st–5th-level slot); and serves as a spellcasting focus. Being part of his body, it needs no attunement slot."
     },
     {
       "id": "orb-of-red", "name": "Orb of Red", "category": "fused", "rarity": "Artifact (planetary)", "attunement": false, "attuned": true, "isFocus": true,

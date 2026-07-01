@@ -58,6 +58,28 @@ try {
   await page.click("#surgeBtn").catch(() => {});
   await page.waitForTimeout(300);
   await shot("32-surge.png");
+  await page.keyboard.press("Escape"); await page.waitForTimeout(100);
+
+  // cast overlay (Fireball)
+  await page.click('[data-action="cast"][data-spell="Fireball"]').catch(() => {});
+  await page.waitForTimeout(300);
+  await shot("40-cast.png", { clip: { x: 360, y: 70, width: 720, height: 640 } });
+  await page.keyboard.press("Escape"); await page.waitForTimeout(80);
+
+  // prismatic spray per-target flow
+  await page.click('[data-action="cast"][data-spell="Prismatic Spray"]').catch(() => {});
+  await page.waitForTimeout(150);
+  await page.fill('#prismN', '3').catch(() => {});
+  await page.click('[data-cast="prism-go"]').catch(() => {});
+  await page.waitForTimeout(200);
+  await shot("41-prismatic.png", { clip: { x: 360, y: 40, width: 720, height: 700 } });
+  await page.keyboard.press("Escape"); await page.waitForTimeout(80);
+
+  // updated panels + new bottom narrative
+  await elShot("42-trackers.png", ".panel:has(h2:text-is('Resources & Trackers'))");
+  await elShot("43-spellcasting.png", ".panel:has(h2:text-is('Spellcasting'))");
+  await elShot("44-narrative.png", ".narrative-panel");
+  await elShot("45-equipment.png", ".panel:has(h2:text('Coins'))");
 
   // mobile
   await page.setViewportSize({ width: 430, height: 900 });

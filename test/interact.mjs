@@ -56,6 +56,35 @@ try {
   // 6. edits persisted to localStorage
   check("persisted to localStorage", !!gaunt, true);
 
+  const sp = () => page.evaluate(() => JSON.parse(localStorage.getItem("kaelaxis-character-v1")).resources.sorceryPoints.current);
+
+  // 7. Font of Magic: L1 has an expended slot from test 6 (1/4). Create one for 1 SP (Cursed Gem discount).
+  const spBefore = await sp();
+  await page.click('[data-action="createslot"][data-level="1"]'); await page.waitForTimeout(80);
+  check("Font of Magic spent 1 SP", spBefore - (await sp()), 1);
+  check("Font of Magic recovered an L1 slot (1/4 → 2/4)", await page.evaluate(() => document.querySelector('.slot-row .slot-count').textContent.trim()), "2/4");
+
+  // 8. Sorcery-point pip: click index 4 -> current becomes 4
+  await page.click('[data-action="respip"][data-res="sorceryPoints"][data-index="4"]'); await page.waitForTimeout(60);
+  check("Sorcery-point pip sets current", await sp(), 4);
+
+  // 9. Add equipment item
+  const before = await page.evaluate(() => (JSON.parse(localStorage.getItem("kaelaxis-character-v1")).flavorInventory || []).length);
+  await page.fill('#flavorAdd', 'Test relic'); await page.click('[data-action="flavor-add"]'); await page.waitForTimeout(80);
+  check("Equipment item added", await page.evaluate(() => (JSON.parse(localStorage.getItem("kaelaxis-character-v1")).flavorInventory || []).length), before + 1);
+
+  // 10. Cast a leveled spell -> overlay opens with a Wild Magic check
+  await page.click('[data-action="cast"][data-spell="Fireball"]'); await page.waitForTimeout(120);
+  check("Cast overlay opened", await page.evaluate(() => document.getElementById("castOverlay").classList.contains("open")), true);
+  check("Cast shows Wild Magic check", await page.evaluate(() => /Wild Magic check/.test(document.getElementById("castBody").textContent)), true);
+  await page.click('#castClose'); await page.waitForTimeout(60);
+
+  // 11. Prismatic Spray -> per-target rays
+  await page.click('[data-action="cast"][data-spell="Prismatic Spray"]'); await page.waitForTimeout(100);
+  await page.fill('#prismN', '2'); await page.click('[data-cast="prism-go"]'); await page.waitForTimeout(100);
+  check("Prismatic Spray resolves per target", await page.evaluate(() => { const t = document.getElementById("prismOut").textContent; return /Target 1/.test(t) && /Target 2/.test(t); }), true);
+  await page.click('#castClose');
+
   check("no JS errors during interaction", errors.length, 0);
   if (errors.length) console.log("  " + errors.join("\n  "));
 } catch (e) {

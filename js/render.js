@@ -139,7 +139,9 @@ function spellcasting(ch, d) {
     </div>
     ${ch.toggles?.innateSorcery?.on ? '<div class="tiny" style="color:var(--gold);margin-top:8px;text-align:center">✦ Innate Sorcery active — DC +1 and spell attacks roll with Advantage</div>' : ""}
     <h3 class="sub">Spell Slots</h3>${slotRows.join("") || '<div class="muted tiny">No slots.</div>'}
-    <div class="tiny muted" style="margin-top:6px">Tap a pip to set slots remaining.</div>`, "◈");
+    <div class="tiny muted" style="margin-top:6px">Tap a pip to set slots remaining.</div>
+    <h3 class="sub">Font of Magic <span class="tiny muted" style="letter-spacing:0;text-transform:none">— create slot (Cursed Gem: −1 pt)</span></h3>
+    <div class="fom-row">${[[1, 1], [2, 2], [3, 4], [4, 5], [5, 6]].map(([l, c]) => `<button class="fom-btn" data-action="createslot" data-level="${l}" data-cost="${c}" data-tip="Spend ${c} Sorcery Point${c > 1 ? "s" : ""} to recover an expended Level ${l} slot">L${l} · ${c}◆</button>`).join("")}</div>`, "◈");
 }
 
 /* ---------------- resources & trackers ---------------- */
@@ -147,13 +149,19 @@ function trackers(ch, d) {
   const rows = Object.entries(ch.resources || {}).map(([key, r]) => {
     const max = d.resources[key]?.maxResolved ?? r.max;
     const name = key.replace(/([A-Z])/g, " $1").replace(/^./, c => c.toUpperCase());
-    return `<div class="counter">
-      <div class="cname">${esc(name)}<small>${esc(r.recharge ? r.recharge + " rest" : "")}</small></div>
-      <div class="piprow">
-        <button class="stepbtn" data-action="adjust" data-path="resources.${key}.current" data-delta="-1">−</button>
-        <span class="cval">${r.current}${max != null ? " / " + max : ""}</span>
-        <button class="stepbtn" data-action="adjust" data-path="resources.${key}.current" data-delta="1" data-max="${max}">+</button>
-      </div></div>`;
+    const pips = (typeof max === "number" && max > 0 && max <= 20)
+      ? `<div class="piprow" style="margin-top:7px">${Array.from({ length: max }, (_, i) => `<span class="pip-slot ${i < r.current ? "filled" : ""}" data-action="respip" data-res="${key}" data-index="${i}"></span>`).join("")}</div>`
+      : "";
+    return `<div class="counter" style="flex-direction:column;align-items:stretch;gap:2px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+        <div class="cname">${esc(name)}<small>${esc(r.recharge ? r.recharge + " rest" : "")}</small></div>
+        <div class="piprow">
+          <button class="stepbtn sm" data-action="adjust" data-path="resources.${key}.current" data-delta="-1">−</button>
+          <span class="cval">${r.current}${max != null ? " / " + max : ""}</span>
+          <button class="stepbtn sm" data-action="adjust" data-path="resources.${key}.current" data-delta="1" data-max="${max}">+</button>
+        </div>
+      </div>${pips}
+    </div>`;
   }).join("");
   return panel("Resources & Trackers", rows, "✦");
 }
@@ -200,7 +208,7 @@ function gauntlet(ch, d, illusionList) {
     const c = cost(s.level);
     const afford = cur >= c;
     return `<div class="ill ${afford ? "" : "cant-afford"}" data-spell="${esc(s.name)}">
-      <div><div class="il-name">${esc(s.name)}</div><div class="il-meta">${s.level === 0 ? "Cantrip" : "Lvl " + s.level} · ${esc(s.school)}${s.concentration ? " · Conc" : ""}</div></div>
+      <div><div class="il-name">${esc(s.name)}</div><div class="il-meta">${s.level === 0 ? "Cantrip" : "Lvl " + s.level} · ${esc(s.school)}${s.concentration ? " · Conc" : ""}${s.source ? " · " + esc(s.source) : ""}</div></div>
       <button class="il-cost" data-action="gaunt-cast" data-spell="${esc(s.name)}" data-cost="${c}" ${afford ? "" : "disabled"}>${c}⚡</button>
     </div>`;
   }).join("");
@@ -240,8 +248,8 @@ function spells(ch, d, spellDB) {
       if (s.concentration) chips.push('<span class="chip conc">C</span>');
       if (s.ritual) chips.push('<span class="chip rit">R</span>');
       return `<div class="spell" data-spell="${esc(p.name)}">
-        <div><span class="sname">${esc(p.name)}</span> <span class="smeta">${esc(s.school || "")}${s.castingTime && s.castingTime !== "Action" ? " · " + esc(s.castingTime) : ""}</span></div>
-        <div class="stags">${chips.join("")}${isAtk ? `<button class="mini-spell" data-action="roll" data-label="${esc(p.name)} attack" data-mod="${d.spellAttack}" data-spellatk="1">atk ${sgn(d.spellAttack)}</button>` : ""}</div>
+        <div><span class="sname">${esc(p.name)}</span> <span class="smeta">${esc(s.school || "")}${s.castingTime && s.castingTime !== "Action" ? " · " + esc(s.castingTime) : ""}${isAtk ? " · atk " + sgn(d.spellAttack) : ""}</span></div>
+        <div class="stags">${chips.join("")}<button class="mini-spell cast-btn" data-action="cast" data-spell="${esc(p.name)}">⚡ Cast</button></div>
       </div>`;
     }).join("");
     return `<div class="spell-level-h">${lvl === 0 ? "Cantrips" : "Level " + lvl}</div>${items}`;
@@ -306,13 +314,14 @@ function equipment(ch) {
   const gp = (totalCp / 100).toFixed(2);
   const coinInputs = ["pp", "gp", "ep", "sp", "cp"].map(k =>
     `<div class="coin"><div class="cn">${k.toUpperCase()}</div><input type="number" data-path="coins.${k}" value="${c[k] || 0}"></div>`).join("");
-  const flavor = (ch.flavorInventory || []).map(x => `<div>• ${esc(x)}</div>`).join("");
+  const flavor = (ch.flavorInventory || []).map((x, i) => `<div class="flavor-item">• ${esc(x)} <span class="jdel" data-action="flavor-del" data-index="${i}" title="remove">✕</span></div>`).join("");
   return panel("Coins & Equipment", `
     <div class="coins">${coinInputs}</div>
     <div class="networth">Total wealth ≈ <b>${gp} gp</b></div>
     <h3 class="sub">Carried</h3>
     <div class="tiny muted" style="margin-bottom:6px">Carry capacity: ${ch.abilities.str * 15} lb (STR ×15)</div>
-    <div class="flavor-list">${flavor}</div>`, "⛃");
+    <div class="flavor-list">${flavor || '<div class="muted tiny">Nothing carried.</div>'}</div>
+    <div class="add-row"><input class="field-input" id="flavorAdd" placeholder="Add an item…"><button class="btn" data-action="flavor-add">+ Add</button></div>`, "⛃");
 }
 
 /* ---------------- journal ---------------- */
@@ -329,10 +338,17 @@ function story(ch, portraitSVG) {
   const art = portraitSVG ? `<div class="portrait-frame">${portraitSVG}</div>` : "";
   return panel("Kaelaxis", `
     ${art}
-    <h3 class="sub">Appearance</h3><textarea class="field-input" data-path="appearance">${esc(ch.appearance)}</textarea>
-    <h3 class="sub">Backstory</h3><textarea class="field-input" data-path="backstory">${esc(ch.backstory)}</textarea>
-    <h3 class="sub">Languages</h3><input class="field-input" data-path="languages" value="${esc((ch.languages || []).join(", "))}">
-    <h3 class="sub">World Notes</h3><textarea class="field-input" style="min-height:120px" data-path="worldNotes">${esc(ch.worldNotes)}</textarea>`, "☾");
+    <h3 class="sub">Languages</h3><input class="field-input" data-path="languages" value="${esc((ch.languages || []).join(", "))}">`, "☾");
+}
+
+function narrative(ch) {
+  return `<div class="panel narrative-panel"><h2>Appearance, Backstory &amp; Lore <span class="flourish">☾</span></h2><div class="panel-body">
+    <div class="narrative-grid">
+      <div><h3 class="sub">Appearance</h3><textarea class="field-input" style="min-height:150px" data-path="appearance">${esc(ch.appearance)}</textarea></div>
+      <div><h3 class="sub">Backstory</h3><textarea class="field-input" style="min-height:150px" data-path="backstory">${esc(ch.backstory)}</textarea></div>
+    </div>
+    <h3 class="sub">World Notes</h3><textarea class="field-input" style="min-height:150px" data-path="worldNotes">${esc(ch.worldNotes)}</textarea>
+  </div></div>`;
 }
 
 /* ---------------- shell ---------------- */
@@ -366,5 +382,6 @@ export function renderApp(root, ctx) {
         ${spells(ch, d, spellDB)}
         ${features(ch)}
       </div>
-    </div>`;
+    </div>
+    ${narrative(ch)}`;
 }
