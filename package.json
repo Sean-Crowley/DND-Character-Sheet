@@ -1,0 +1,15 @@
+{
+  "name": "kaelaxis-sheet",
+  "version": "1.0.0",
+  "description": "Local D&D 2024 character sheet for Kaelaxis (dev tooling only; the app itself needs no dependencies).",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "serve": "python -m http.server 8770",
+    "test": "node test/engine.test.mjs",
+    "capture": "node test/capture.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.61.1"
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "meta": { "appName": "Kaelaxis", "edition": "D&D 2024", "schemaVersion": 1 },
+
+  "identity": {
+    "name": "Kaelaxis",
+    "background": "Merchant",
+    "class": "Sorcerer",
+    "subclass": "Wild Magic",
+    "level": 14,
+    "species": "Human",
+    "xp": 0,
+    "size": "Medium",
+    "alignment": ""
+  },
+
+  "abilities": { "str": 8, "dex": 14, "con": 18, "int": 8, "wis": 10, "cha": 20 },
+  "spellcastingAbility": "cha",
+  "hitDie": 6,
+
+  "proficiencies": {
+    "saves": ["con", "cha"],
+    "skills": ["arcana", "deception", "insight", "persuasion"],
+    "expertise": [],
+    "armorTraining": [],
+    "weapons": ["Simple weapons"],
+    "tools": ["Navigator's Tools"]
+  },
+
+  "advantages": [
+    { "roll": "skill.deception", "source": "Godsgrasp gauntlet", "note": "Advantage on Deception checks" }
+  ],
+
+  "hp": { "current": 114, "temp": 0, "method": "average", "maxOverride": null, "flatBonus": 0 },
+  "hitDiceSpent": 0,
+  "deathSaves": { "successes": 0, "failures": 0 },
+  "speed": 30,
+  "senses": { "blindsight": 120, "darkvision": 0, "note": "Blindsight 120 ft (Godsgrasp gauntlet)" },
+
+  "feats": ["Lucky", "War Caster", "Alert"],
+
+  "toggles": {
+    "innateSorcery": { "on": false, "label": "Innate Sorcery", "note": "+1 spell save DC and advantage on spell attack rolls while active" },
+    "mageArmor": { "on": true, "label": "Mage Armor", "note": "AC becomes 13 + DEX while active" },
+    "shieldSpell": { "on": false, "label": "Shield (1 rd)", "note": "+5 AC until the start of your next turn (a Reaction) — remember to switch it back off" }
+  },
+
+  "modifiers": [
+    { "id": "gem-spell", "name": "Cursed Gem", "source": "Cursed Gem (fused)", "targets": ["spellAttack", "spellSaveDC"], "value": 1, "condition": "always", "note": "+1 spell attack rolls and +1 spell save DC (always on)" },
+    { "id": "innate-dc", "name": "Innate Sorcery", "source": "Innate Sorcery", "targets": ["spellSaveDC"], "value": 1, "condition": "innateSorcery", "note": "+1 spell save DC while Innate Sorcery is active (also grants advantage on spell attacks — handled by the roller)" }
+  ],
+
+  "ac": { "unarmoredBase": 10, "mageArmorBase": 13, "shieldSpellBonus": 5, "flatModifiers": [] },
+
+  "resources": {
+    "sorceryPoints": { "current": 14, "max": "level", "recharge": "long" },
+    "innateSorcery": { "current": 2, "max": 2, "recharge": "long" },
+    "heroicInspiration": { "current": 0, "max": 1, "recharge": "long", "note": "Human Resourceful: gain 1 Heroic Inspiration after a Long Rest" },
+    "luckPoints": { "current": 5, "max": "proficiency", "recharge": "long", "note": "Lucky feat: luck points equal to your proficiency bonus" },
+    "tidesOfChaos": { "current": 1, "max": 1, "recharge": "long", "note": "Advantage on one d20 test; recharges on a Wild Magic Surge or a Long Rest" },
+    "sorcerousRestoration": { "current": 1, "max": 1, "recharge": "long", "note": "Once per day on a Short Rest, regain sorcery points equal to half your level (7)" }
+  },
+
+  "spellSlots": {
+    "1": { "expended": 0 }, "2": { "expended": 0 }, "3": { "expended": 0 },
+    "4": { "expended": 0 }, "5": { "expended": 0 }, "6": { "expended": 0 },
+    "7": { "expended": 0 }, "8": { "expended": 0 }, "9": { "expended": 0 }
+  },
+
+  "metamagic": ["Twinned Spell", "Transmuted Spell", "Heightened Spell", "Subtle Spell"],
+
+  "preparedSpells": [
+    { "name": "Minor Illusion", "level": 0 },
+    { "name": "Shocking Grasp", "level": 0 },
+    { "name": "Sorcerous Burst", "level": 0 },
+    { "name": "Mage Hand", "level": 0 },
+    { "name": "Prestidigitation", "level": 0 },
+    { "name": "Mind Sliver", "level": 0 },
+    { "name": "Mage Armor", "level": 1 },
+    { "name": "Shield", "level": 1 },
+    { "name": "Chromatic Orb", "level": 1 },
+    { "name": "Hold Person", "level": 2 },
+    { "name": "Knock", "level": 2 },
+    { "name": "Phantasmal Force", "level": 2 },
+    { "name": "Suggestion", "level": 2 },
+    { "name": "Scorching Ray", "level": 2 },
+    { "name": "Haste", "level": 3 },
+    { "name": "Fireball", "level": 3 },
+    { "name": "Banishment", "level": 4 },
+    { "name": "Hold Monster", "level": 5 },
+    { "name": "Animate Objects", "level": 5 },
+    { "name": "Chain Lightning", "level": 6 },
+    { "name": "Disintegrate", "level": 6 },
+    { "name": "Arcane Gate", "level": 6 },
+    { "name": "Prismatic Spray", "level": 7 },
+    { "name": "Teleport", "level": 7 }
+  ],
+
+  "features": {
+    "class": [
+      { "name": "Innate Sorcery", "uses": "2 / Long Rest", "text": "As a Bonus Action, unleash your innate magic for 1 minute: your spell save DC increases by 1, and you have Advantage on the attack rolls of Sorcerer spells you cast. Toggle it on/off at the top of the sheet." },
+      { "name": "Font of Magic — Sorcery Points", "text": "You have Sorcery Points equal to your Sorcerer level (14). Convert them into spell slots or fuel Metamagic. Regain all on a Long Rest." },
+      { "name": "Metamagic", "text": "You know four Metamagic options (see the Metamagic panel): Twinned, Transmuted, Heightened, and Subtle Spell." },
+      { "name": "Sorcerous Restoration", "text": "Once per day when you finish a Short Rest, regain expended Sorcery Points equal to half your Sorcerer level (7)." }
+    ],
+    "subclass": [
+      { "name": "Wild Magic Surge", "text": "Once per turn, after you cast a Sorcerer spell of level 1+, roll d20. On a 20, roll on the Wild Magic Surge table (see the Wild Magic roller)." },
+      { "name": "Tides of Chaos", "text": "Give yourself Advantage on one d20 Test. You must then roll on the Wild Magic Surge table before you regain this use (or regain it on a Long Rest)." },
+      { "name": "Bend Luck", "text": "As a Reaction when another creature makes a d20 Test, spend 2 Sorcery Points to add or subtract 1d4 from the roll." },
+      { "name": "Controlled Chaos", "text": "Whenever you roll on the Wild Magic Surge table, roll twice and use either result." }
+    ],
+    "species": [
+      { "name": "Resourceful", "text": "You gain Heroic Inspiration whenever you finish a Long Rest." },
+      { "name": "Skillful", "text": "You gain proficiency in one skill of your choice." },
+      { "name": "Versatile", "text": "You gained an Origin feat (Lucky) at 1st level." }
+    ],
+    "feats": [
+      { "name": "Lucky (Origin)", "text": "You have Luck Points equal to your proficiency bonus (5), regained on a Long Rest. Spend 1 to give yourself Advantage on a d20 Test, or to impose Disadvantage on an attack roll against you." },
+      { "name": "War Caster", "text": "Advantage on Constitution saving throws to maintain Concentration; you can perform somatic components even with weapons/a focus in hand; and you can cast a spell as an Opportunity Attack instead of making a melee attack." },
+      { "name": "Alert", "text": "You add your Proficiency Bonus (+5) to your Initiative rolls, and you can swap Initiative with a willing ally." }
+    ]
+  },
+
+  "gauntlet": {
+    "name": "Godsgrasp — Aegis of Borrowed Faces",
+    "wornOn": "right hand",
+    "attunement": true,
+    "attuned": true,
+    "senses": "Blindsight 120 ft",
+    "grants": ["Blindsight 120 ft", "Advantage on Deception checks", "Serves as a spellcasting focus"],
+    "weapon": { "name": "Godsgrasp Strike", "ability": "dex", "damageDice": "3d6", "damageType": "force", "note": "Attack and damage use your Dexterity. (Damage type set to force — verify with DM.)" },
+    "charges": { "current": 9, "max": 9, "recharge": "dawn" },
+    "illusionCasting": { "costRule": "spellLevel", "cantripCost": 1, "useOwnStats": true, "note": "Spend charges equal to the spell's level (cantrips cost 1) to cast ANY illusion spell — even ones you don't know or that aren't on the Sorcerer list. Saves/attacks use your own Spell Save DC and CHA spell attack." },
+    "lore": "A gauntlet claimed from a distant planet, forged from the essence of powerful beings — it steals faces, and with them, illusions. Kaelaxis wears it on his right hand.",
+    "description": "Wondrous item (gauntlet), requires attunement, worn on the right hand. Grants Blindsight out to 120 feet and Advantage on Deception checks, and functions as a spellcasting focus. As a weapon it strikes for 3d6 + DEX (uses Dexterity to attack). It holds 9 charges and regains all of them at dawn; spend charges equal to a spell's level (cantrips cost 1) to cast any Illusion spell from the Gauntlet library, using your own spell save DC and spell attack."
+  },
+
+  "items": [
+    {
+      "id": "cursed-gem", "name": "Cursed Gem", "category": "fused", "rarity": "Artifact (planetary)", "attunement": false, "attuned": true, "isFocus": true,
+      "effects": ["+1 to spell attack rolls (always)", "+1 to spell save DC (always)", "Spellcasting focus"],
+      "charges": null,
+      "description": "A cursed gem fused into Kaelaxis's chest — one of the planetary-infused relics formed from the essence of powerful beings. It permanently grants +1 to his spell attack rolls and +1 to his spell save DC, and serves as a spellcasting focus. Being part of his body, it needs no attunement slot.",
+      "reviewNote": "The old sheet also noted 'spell level +1 sorcery points gained' next to the gem — mechanic unconfirmed; verify with your DM before enabling."
+    },
+    {
+      "id": "orb-of-red", "name": "Orb of Red", "category": "fused", "rarity": "Artifact (planetary)", "attunement": false, "attuned": true, "isFocus": true,
+      "effects": ["Spells you cast on yourself are cast at 1 slot level lower (min. the spell's base level)", "Spellcasting focus"],
+      "charges": null,
+      "description": "A powerful planetary-infused orb that literally replaced Kaelaxis's heart. Spells he casts on himself are cast as though one slot level lower (never below the spell's base level), and it functions as a spellcasting focus. Being part of his body, it needs no attunement slot."
+    },
+    {
+      "id": "godsgrasp", "name": "Godsgrasp — Aegis of Borrowed Faces", "category": "attuned", "rarity": "Artifact (planetary)", "attunement": true, "attuned": true, "isFocus": true, "isGauntlet": true,
+      "effects": ["Blindsight 120 ft", "Advantage on Deception", "3d6 + DEX strike", "9 charges → cast any illusion (cost = spell level)"],
+      "charges": { "current": 9, "max": 9, "recharge": "dawn" },
+      "description": "See the Godsgrasp panel. A planetary gauntlet worn on the right hand: Blindsight 120 ft, Advantage on Deception, a 3d6+DEX strike, and a 9-charge illusion library (charges = spell level; cantrips cost 1) cast with your own DC/attack."
+    },
+    {
+      "id": "cloak-of-shadows", "name": "Cloak of Shadows", "category": "attuned", "rarity": "Rare", "attunement": true, "attuned": true, "isFocus": false,
+      "effects": ["Misty Step (1 charge)", "Shield (2)", "Darkness (2)", "Invisibility (3)"],
+      "charges": { "current": 5, "max": 5, "recharge": "dusk", "rechargeAmount": "1d6" },
+      "spells": [
+        { "name": "Misty Step", "cost": 1 },
+        { "name": "Shield", "cost": 2 },
+        { "name": "Darkness", "cost": 2 },
+        { "name": "Invisibility", "cost": 3 }
+      ],
+      "description": "Kaelaxis's stealthy admiral's cloak. It holds up to 5 charges and regains 1d6 at dusk. Spend charges to cast Misty Step (1), Shield (2), Darkness (2), or Invisibility (3). Requires attunement."
+    },
+    {
+      "id": "boots-of-levitation", "name": "Boots of Levitation", "category": "attuned", "rarity": "Rare", "attunement": true, "attuned": true, "isFocus": false,
+      "effects": ["Cast Levitate on yourself at will"],
+      "charges": null,
+      "description": "While you wear these boots, you can cast Levitate on yourself at will, needing no components. Requires attunement."
+    },
+    {
+      "id": "crystal-ball-true-seeing", "name": "Crystal Ball of True Seeing", "category": "owned", "rarity": "Legendary", "attunement": true, "attuned": false, "isFocus": false,
+      "effects": ["Scry (as the Scry spell)", "See through the sensor with truesight (120 ft) while scrying"],
+      "charges": null,
+      "description": "A crystal ball you can use to cast the Scry spell (save DC 17). While scrying, you can see through the invisible sensor with truesight out to 120 feet. Requires attunement — currently NOT one of your 3 attuned items, so its effect is inactive until you attune to it."
+    },
+    {
+      "id": "staff-of-charming", "name": "Staff of Charming", "category": "owned", "rarity": "Rare", "attunement": true, "attuned": false, "isFocus": true,
+      "effects": ["Charm Person / Command / Comprehend Languages (1 charge)", "Absorb an enchantment targeting you", "10 charges, regains 1d8+2 at dawn"],
+      "charges": { "current": 10, "max": 10, "recharge": "dawn", "rechargeAmount": "1d8+2" },
+      "spells": [
+        { "name": "Charm Person", "cost": 1 },
+        { "name": "Command", "cost": 1 },
+        { "name": "Comprehend Languages", "cost": 1 }
+      ],
+      "description": "A staff with 10 charges (regains 1d8+2 at dawn). Spend a charge to cast Charm Person, Command, or Comprehend Languages, and you can use a Reaction to absorb an enchantment spell targeting you. Requires attunement — currently NOT attuned, so inactive until you attune to it.",
+      "reviewNote": "Charges are tracked, but this item is inactive until it occupies one of your 3 attunement slots."
+    },
+    {
+      "id": "wand-of-magic-missiles", "name": "Wand of Magic Missiles", "category": "other", "rarity": "Uncommon", "attunement": false, "attuned": false, "isFocus": false,
+      "effects": ["Cast Magic Missile (1 charge = 1st level, 3 darts of 1d4+1)", "+1 charge to cast one slot level higher", "7 charges, regains 1d6+1 at dawn", "On last charge, roll d20 — on a 1 the wand crumbles to ash"],
+      "charges": { "current": 7, "max": 7, "recharge": "dawn", "rechargeAmount": "1d6+1" },
+      "spells": [ { "name": "Magic Missile", "cost": 1 } ],
+      "description": "A wand with 7 charges (regains 1d6+1 at dawn). Spend 1 charge to cast Magic Missile as a 1st-level spell (three 1d4+1 force darts); spend 1 extra charge per higher level (one extra dart each). If you spend the last charge, roll a d20 — on a 1 the wand crumbles to ash."
+    },
+    {
+      "id": "deck-of-illusions", "name": "Deck of Illusions", "category": "other", "rarity": "Uncommon", "attunement": false, "attuned": false, "isFocus": false,
+      "effects": ["Draw a card to create an illusory creature until dismissed", "29 cards remaining"],
+      "charges": { "current": 29, "max": 34, "recharge": "none", "label": "cards" },
+      "description": "As a Magic action, draw a random card and throw it down to create an illusory creature (as programmed by the card) until it's dismissed or reduced to 0 HP by an Investigation check. The drawn card is blank until the illusion ends. You have 29 cards remaining."
+    },
+    {
+      "id": "bag-of-devouring", "name": "Bag of Devouring", "category": "other", "rarity": "Very Rare", "attunement": false, "attuned": false, "isFocus": false,
+      "effects": ["Appears as a Bag of Holding", "Devours anything fully placed inside (destroyed after 1 minute)", "Can pull creatures in — use with great care"],
+      "charges": null,
+      "description": "Looks and initially behaves like a Bag of Holding, but it's the gullet of an extradimensional creature. Anything wholly placed inside is drawn in and devoured — destroyed after 1 minute. Living matter that ends up inside is pulled into the void beyond. Dangerous; store nothing you want back."
+    },
+    {
+      "id": "hags-eye", "name": "Hag's Eye", "category": "other", "rarity": "Rare", "attunement": false, "attuned": false, "isFocus": false,
+      "effects": ["Remote sight / scrying — see through it from a distance"],
+      "charges": null,
+      "description": "An eye-shaped gem you can use as a remote sight / scrying tool: place it or activate it to see through it from afar. (Confirm exact range and activation with your DM.)"
+    },
+    {
+      "id": "helmet-of-the-lay", "name": "Helmet from the Lay", "category": "other", "rarity": "Unknown", "attunement": true, "attuned": false, "isFocus": false,
+      "effects": ["Magical (effect TBD)"],
+      "charges": null,
+      "description": "A magical helmet claimed in the Lay during a battle with a powerful daemon. Its exact powers and worth are not yet determined.",
+      "reviewNote": "EFFECT TBD — define its mechanical benefit (and whether it needs attunement / one of your 3 slots) with your DM, then fill it in here."
+    },
+    {
+      "id": "potion-of-healing", "name": "Potion of Healing", "category": "consumable", "rarity": "Common", "attunement": false, "attuned": false, "isFocus": false,
+      "quantity": 2,
+      "effects": ["Regain 2d4 + 2 HP (Bonus Action to drink)"],
+      "charges": null,
+      "description": "A vial of red liquid. As a Bonus Action, drink it to regain 2d4 + 2 Hit Points. You have 2."
+    }
+  ],
+
+  "flavorInventory": [
+    "Staff and fancy gem",
+    "380 feet of rope",
+    "Lock and key",
+    "Ruby dust ×30 (loose 'coins')",
+    "Chip off the wall near the portal to the Lay; chip off the stairway in the valley",
+    "5 spare arcane focuses (slightly damaged)",
+    "Lair blowgun dart",
+    "Hair from the color guard"
+  ],
+
+  "coins": { "cp": 200, "sp": 0, "ep": 0, "gp": 89, "pp": 0 },
+
+  "conditions": [],
+  "concentration": { "active": false, "spell": "" },
+
+  "journal": [],
+
+  "languages": ["Common", "Sumptous", "Extravaganza", "Gobbly gook", "Costco"],
+
+  "appearance": "An older gentleman who appears to be in his late 40s — though in truth he is ancient and simply stopped aging in body. Kaelaxis is the admiral who commands two massive spaceships and the whole fleet aboard them. He wears an admiral's coat with the arcane touch of a sorcerer's robe woven through it, over the stealthy Cloak of Shadows. His eyes are heavy and weary; they have seen far too much.",
+
+  "backstory": "Kaelaxis, Merchant-turned-fleet-admiral and Wild Magic Sorcerer. Two planetary relics were fused into his very body — the Cursed Gem in his chest and the Orb of Red in place of his heart — binding him to powers not entirely his own.",
+
+  "worldNotes": "Veral · Pontushum · 6 mermath — Alip · Tesh rules the desert · selarium.\nAll-in-None (Dragon of No Colors). Panicle is God of Lyrathy / Tesh. Arbend draws power from the All-in-None (maybe). The Death God infects people. Avish and Tesh are at war. Keleklasts. Alignment territory. Witch / Warden avatar. 'Gel we could act like Gods.' Eggs in the deep cellar in a major town.",
+
+  "reviewFlags": [
+    "Skill proficiencies defaulted to Arcana, Deception, Insight, Persuasion — verify against your real sheet.",
+    "Languages transcribed literally from the old sheet (Sumptous / Extravaganza / Gobbly gook / Costco) — correct if these were jokes/placeholders.",
+    "Godsgrasp strike damage type set to 'force' — set the real type.",
+    "Cursed Gem 'spell level +1 sorcery points' note left OFF pending confirmation.",
+    "Helmet from the Lay effect is TBD.",
+    "World notes were OCR-garbled on the original sheet; cleaned lightly — fix names as needed."
+  ]
+}

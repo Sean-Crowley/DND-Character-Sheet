@@ -1,0 +1,69 @@
+[
+  {
+    "name": "Magic Missile", "level": 1, "school": "Evocation", "castingTime": "Action", "range": "120 feet",
+    "components": "V, S", "duration": "Instantaneous", "concentration": false, "ritual": false,
+    "classes": ["Sorcerer", "Wizard"],
+    "description": "You create three glowing darts of magical force. Each dart strikes a creature of your choice that you can see within range, automatically hitting for 1d4 + 1 Force damage. All darts strike simultaneously, and you can direct them at one target or several.",
+    "higherLevel": "Creates one additional dart for each spell slot level above 1.",
+    "tags": ["force", "auto-hit"]
+  },
+  {
+    "name": "Misty Step", "level": 2, "school": "Conjuration", "castingTime": "Bonus Action", "range": "Self",
+    "components": "V", "duration": "Instantaneous", "concentration": false, "ritual": false,
+    "classes": ["Sorcerer", "Warlock", "Wizard"],
+    "description": "Surrounded briefly by silvery mist, you teleport up to 30 feet to an unoccupied space you can see.",
+    "higherLevel": "", "tags": ["teleport", "utility"]
+  },
+  {
+    "name": "Darkness", "level": 2, "school": "Evocation", "castingTime": "Action", "range": "60 feet",
+    "components": "V, M (a coating of soot and pitch)", "duration": "Up to 10 minutes", "concentration": true, "ritual": false,
+    "classes": ["Sorcerer", "Warlock", "Wizard"],
+    "description": "Magical darkness spreads from a point you choose within range to fill a 15-foot-radius Sphere for the duration. The darkness moves with an object it's cast on and can't be pierced by darkvision. If any of the area overlaps with bright or dim light created by a spell of level 2 or lower, that light is dispelled.",
+    "higherLevel": "", "tags": ["control", "darkness"]
+  },
+  {
+    "name": "Invisibility", "level": 2, "school": "Illusion", "castingTime": "Action", "range": "Touch",
+    "components": "V, S, M (an eyelash in gum arabic)", "duration": "Up to 1 hour", "concentration": true, "ritual": false,
+    "classes": ["Bard", "Sorcerer", "Warlock", "Wizard"],
+    "description": "A creature you touch has the Invisible condition until the spell ends. The effect ends early on that creature if it makes an attack roll, deals damage, or casts a spell.",
+    "higherLevel": "You can target one additional creature for each spell slot level above 2.",
+    "tags": ["buff", "invisible"]
+  },
+  {
+    "name": "Charm Person", "level": 1, "school": "Enchantment", "castingTime": "Action", "range": "30 feet",
+    "components": "V, S", "duration": "Up to 1 hour", "concentration": false, "ritual": false,
+    "classes": ["Bard", "Druid", "Sorcerer", "Warlock", "Wizard"],
+    "description": "One Humanoid you can see within range must succeed on a Wisdom saving throw (with Advantage if you or your allies are fighting it) or have the Charmed condition until the spell ends or until you or your allies damage it. The charmed target regards you as a friendly acquaintance, and when the spell ends it knows it was charmed by you.",
+    "higherLevel": "You can target one additional Humanoid for each spell slot level above 1.",
+    "tags": ["control", "save:WIS", "charmed"]
+  },
+  {
+    "name": "Command", "level": 1, "school": "Enchantment", "castingTime": "Action", "range": "60 feet",
+    "components": "V", "duration": "Instantaneous", "concentration": false, "ritual": false,
+    "classes": ["Bard", "Cleric", "Paladin"],
+    "description": "You speak a one-word command to a creature you can see within range. It must succeed on a Wisdom saving throw or follow the command on its next turn — typical commands include Approach, Drop, Flee, Grovel, or Halt. The spell has no effect if the target is Undead, doesn't understand your language, or if the command is directly harmful to it.",
+    "higherLevel": "You can affect one additional creature for each spell slot level above 1.",
+    "tags": ["control", "save:WIS"]
+  },
+  {
+    "name": "Comprehend Languages", "level": 1, "school": "Divination", "castingTime": "Action", "range": "Self",
+    "components": "V, S, M (a pinch of soot and salt)", "duration": "1 hour", "concentration": false, "ritual": true,
+    "classes": ["Bard", "Sorcerer", "Warlock", "Wizard"],
+    "description": "For the duration, you understand the literal meaning of any language you hear or read (touching the surface it's written on). It doesn't decode secret messages or ciphers.",
+    "higherLevel": "", "tags": ["utility", "ritual"]
+  },
+  {
+    "name": "Levitate", "level": 2, "school": "Transmutation", "castingTime": "Action", "range": "60 feet",
+    "components": "V, S, M (a small leather loop or golden wire bent into a cup)", "duration": "Up to 10 minutes", "concentration": true, "ritual": false,
+    "classes": ["Sorcerer", "Wizard"],
+    "description": "One creature or loose object of your choice (up to 500 pounds) that you can see rises vertically up to 20 feet and remains suspended for the duration. An unwilling creature that fails a Constitution saving throw is affected; you can move a levitated target up or down as a Magic action, but it can only move horizontally by pushing against a fixed object.",
+    "higherLevel": "", "tags": ["utility", "save:CON"]
+  },
+  {
+    "name": "Scry", "level": 5, "school": "Divination", "castingTime": "1 hour", "range": "Self",
+    "components": "V, S, M (a focus worth 1,000+ GP, such as a crystal ball)", "duration": "Up to 10 minutes", "concentration": true, "ritual": false,
+    "classes": ["Bard", "Cleric", "Druid", "Warlock", "Wizard"],
+    "description": "You can see and hear a creature you choose that is on the same plane of existence, via an invisible sensor within 10 feet of it. The target makes a Wisdom saving throw, modified by how well you know it and what physical connection you have; on a success it's unaffected and you can't scry it again for 24 hours.",
+    "higherLevel": "", "tags": ["divination", "save:WIS"]
+  }
+]

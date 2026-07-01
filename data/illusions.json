@@ -1,0 +1,613 @@
+[
+  {
+    "name": "Minor Illusion",
+    "level": 0,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "30 feet",
+    "components": "S, M (a bit of fleece)",
+    "duration": "1 minute",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You conjure either a stationary object no larger than a 5-foot cube or a single sound (from a whisper to a scream) that lasts for the duration. The illusion has no smell, temperature, or other physical trait, and it can't deal damage or produce spoken words. A creature that studies the illusion can attempt an Investigation check against your spell save DC to discern it as false, and physical interaction with an illusory object also reveals the deception.",
+    "higherLevel": "",
+    "tags": [
+      "utility",
+      "check:Investigation"
+    ]
+  },
+  {
+    "name": "Silent Image",
+    "level": 1,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "60 feet",
+    "components": "V, S, M (a bit of fleece)",
+    "duration": "Concentration, up to 10 minutes",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You create a purely visual image of an object, creature, or other phenomenon no larger than a 15-foot cube within range. The image makes no sound and produces no other sensory effects, and you can use your action to move it anywhere within range, altering its appearance so the motion looks natural. A creature that examines the image can make an Investigation check against your spell save DC; on a success it recognizes the illusion, and physical interaction passes harmlessly through it.",
+    "higherLevel": "",
+    "tags": [
+      "utility",
+      "check:Investigation"
+    ]
+  },
+  {
+    "name": "Disguise Self",
+    "level": 1,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "1 hour",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You cloak yourself and your gear in an illusion, changing your appearance until the spell ends. You can alter your apparent height by up to a foot and make yourself look thinner, heavier, or otherwise different, though the disguise is only visual. A creature can use its action to inspect you and, on a successful Investigation check against your spell save DC, or on physical contact that passes through an illusory feature, sees through the ruse.",
+    "higherLevel": "",
+    "tags": [
+      "utility",
+      "check:Investigation"
+    ]
+  },
+  {
+    "name": "Color Spray",
+    "level": 1,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "Self (15-foot Cone)",
+    "components": "V, S, M (a pinch of colorful powder)",
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "A dazzling array of flashing colors erupts from your hand in a 15-foot cone. Each creature in the area must succeed on a Constitution saving throw or have the Blinded condition until the end of your next turn. Creatures that can't see are unaffected.",
+    "higherLevel": "Using a spell slot of level 2 or higher has no additional effect; the spell does not scale.",
+    "tags": [
+      "save:CON",
+      "blinded",
+      "control"
+    ]
+  },
+  {
+    "name": "Phantasmal Force",
+    "level": 2,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "60 feet",
+    "components": "V, S, M (a bit of fleece)",
+    "duration": "Concentration, up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You craft an illusion in the mind of one creature that fails an Intelligence saving throw, causing it to perceive a phantom object, creature, or hazard of your design (no larger than a 10-foot cube). The target rationalizes the illusion as real and can be harmed by it, taking 1d6 psychic damage at the start of each of its turns if the phantasm implies danger such as fire or acid. It can repeat the save by using its action to examine the phantasm, ending the effect on a success.",
+    "higherLevel": "",
+    "tags": [
+      "psychic",
+      "save:INT",
+      "control"
+    ]
+  },
+  {
+    "name": "Blur",
+    "level": 2,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "Self",
+    "components": "V",
+    "duration": "Concentration, up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "Your form becomes blurred and indistinct, shifting so that other creatures have Disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, such as a creature with Blindsight, or if it can see through illusions like with Truesight.",
+    "higherLevel": "",
+    "tags": [
+      "defense",
+      "buff"
+    ]
+  },
+  {
+    "name": "Invisibility",
+    "level": 2,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "Touch",
+    "components": "V, S, M (an eyelash in gum arabic)",
+    "duration": "Concentration, up to 1 hour",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "A creature you touch gains the Invisible condition until the spell ends, and anything it is carrying or wearing turns invisible as long as it stays on the target's person. The effect ends for that creature immediately after it makes an attack roll, deals damage, or casts a spell.",
+    "higherLevel": "Using a level 3+ slot, you can target one additional creature for each slot level above 2.",
+    "tags": [
+      "utility",
+      "buff",
+      "invisible"
+    ]
+  },
+  {
+    "name": "Mirror Image",
+    "level": 2,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "1 minute",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "Three illusory duplicates of yourself appear in your space, shuffling positions so it's hard to tell which is real. Whenever a creature targets you with an attack while duplicates remain, roll a d20: with three duplicates you divert the attack on an 6 or higher, with two on an 8 or higher, and with one on an 11 or higher; a diverted attack destroys that duplicate. A duplicate's AC equals 10 plus your Dexterity modifier, and the effect fails against attackers that can't see or that ignore illusions.",
+    "higherLevel": "",
+    "tags": [
+      "defense",
+      "buff"
+    ]
+  },
+  {
+    "name": "Magic Mouth",
+    "level": 2,
+    "school": "Illusion",
+    "castingTime": "1 minute",
+    "range": "30 feet",
+    "components": "V, S, M (a bit of honeycomb and jade dust worth 10+ GP)",
+    "duration": "Until dispelled",
+    "concentration": false,
+    "ritual": true,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You implant a spoken message of up to 25 words into an object within range, setting a trigger condition that you can perceive (such as someone approaching within 30 feet). When the condition is met, an illusory mouth appears on the object and recites the message once in a voice matching its length (up to 10 minutes), after which it can trigger again whenever the condition recurs.",
+    "higherLevel": "",
+    "tags": [
+      "utility"
+    ]
+  },
+  {
+    "name": "Nystul's Magic Aura",
+    "level": 2,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "Touch",
+    "components": "V, S, M (a small square of silk)",
+    "duration": "24 hours",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Wizard"
+    ],
+    "description": "You place an illusory magical property on a creature or object you touch. You may make the target register to divination magic as if it were a different type (or as a chosen magic school), or make a creature that is willing or that you have Incapacitated appear as a Celestial, Fiend, Fey, or other creature type. Cast on the same target every day for 30 days, the effect becomes permanent until dispelled.",
+    "higherLevel": "",
+    "tags": [
+      "utility",
+      "abjuration"
+    ]
+  },
+  {
+    "name": "Hypnotic Pattern",
+    "level": 3,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "120 feet",
+    "components": "S, M (a glowing stick of incense or a crystal vial of phosphorescent material)",
+    "duration": "Concentration, up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You weave a twisting pattern of colors in a 30-foot cube within range. Each creature in the area that can see the pattern must succeed on a Wisdom saving throw or gain the Charmed condition for the duration, becoming Incapacitated and having a Speed of 0. The effect ends for a charmed creature if it takes damage or if someone else uses an action to shake it out of its stupor.",
+    "higherLevel": "",
+    "tags": [
+      "save:WIS",
+      "charmed",
+      "incapacitated",
+      "control"
+    ]
+  },
+  {
+    "name": "Major Image",
+    "level": 3,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "120 feet",
+    "components": "V, S, M (a bit of fleece)",
+    "duration": "Concentration, up to 10 minutes",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You create the image of an object, creature, or other visible phenomenon no larger than a 20-foot cube, complete with sound, smell, and temperature. You can use your action to move the illusion within range and make it interact believably with its surroundings, such as opening a door or leaving footprints. A creature that uses its action to examine the image can discern it as illusory with a successful Investigation check against your spell save DC, and physical interaction reveals it to be insubstantial.",
+    "higherLevel": "Cast with a level 6+ slot, the spell lasts until dispelled (no Concentration required).",
+    "tags": [
+      "utility",
+      "check:Investigation"
+    ]
+  },
+  {
+    "name": "Fear",
+    "level": 3,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "Self (30-foot Cone)",
+    "components": "V, S, M (a white feather or the heart of a hen)",
+    "duration": "Concentration, up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You project a phantasmal image of the thing each creature dreads most in a 30-foot cone. Each creature in the area must succeed on a Wisdom saving throw or drop whatever it is holding and gain the Frightened condition. A frightened creature must take the Dash action to flee by the safest route on each turn unless there is nowhere to move, and it repeats the save at the end of each of its turns, ending the effect on itself on a success.",
+    "higherLevel": "",
+    "tags": [
+      "save:WIS",
+      "frightened",
+      "control"
+    ]
+  },
+  {
+    "name": "Phantom Steed",
+    "level": 3,
+    "school": "Illusion",
+    "castingTime": "1 minute",
+    "range": "30 feet",
+    "components": "V, S",
+    "duration": "1 hour",
+    "concentration": false,
+    "ritual": true,
+    "classes": [
+      "Wizard"
+    ],
+    "description": "A Large quasi-real horselike creature appears in an unoccupied space you can see and lasts for the duration, and it vanishes if it takes any damage. Only you may ride it; while mounted you travel at a gallop of 100 feet per round, covering about 10 miles in an hour (13 if the pace is a trot). When the spell ends the steed fades gradually, granting the rider one minute to dismount before disappearing.",
+    "higherLevel": "",
+    "tags": [
+      "utility",
+      "conjuration",
+      "travel"
+    ]
+  },
+  {
+    "name": "Catnap",
+    "level": 3,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "30 feet",
+    "components": "S, M (a pinch of sand)",
+    "duration": "10 minutes",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You send up to three willing creatures within range that have 3 or fewer levels or hit dice into a brief slumber, causing them to fall Unconscious for the spell's duration. At the end of the 10 minutes, or if a creature takes damage or someone uses an action to wake it, the target rouses having gained the benefits of a Short Rest. Once a creature benefits from this spell, it can't do so again until it finishes a Long Rest.",
+    "higherLevel": "Using a level 4+ slot, you can target two additional creatures for each slot level above 3.",
+    "tags": [
+      "utility",
+      "unconscious",
+      "rest"
+    ]
+  },
+  {
+    "name": "Greater Invisibility",
+    "level": 4,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "Touch",
+    "components": "V, S",
+    "duration": "Concentration, up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "A creature you touch gains the Invisible condition for the duration. Unlike lesser invisibility, this version persists even when the target attacks or casts spells, making it ideal for combat. It lasts as long as you maintain concentration or until the minute elapses.",
+    "higherLevel": "",
+    "tags": [
+      "invisibility",
+      "buff",
+      "concentration"
+    ]
+  },
+  {
+    "name": "Hallucinatory Terrain",
+    "level": 4,
+    "school": "Illusion",
+    "castingTime": "10 minutes",
+    "range": "300 feet",
+    "components": "V, S, M (a mushroom)",
+    "duration": "24 hours",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Druid",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You disguise natural terrain within a 150-foot cube so it looks, sounds, and smells like a different kind of natural terrain, such as making a field appear to be a swamp or a chasm seem like a smooth road. Structures, equipment, and creatures are unaffected, and the terrain still feels normal to the touch. A creature that examines the area by touch or takes the Study action to make an Intelligence (Investigation) check against your spell save DC can discern the illusion, then sees a faint image over the real ground.",
+    "higherLevel": "",
+    "tags": [
+      "terrain",
+      "utility",
+      "save:INT"
+    ]
+  },
+  {
+    "name": "Phantasmal Killer",
+    "level": 4,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "120 feet",
+    "components": "V, S",
+    "duration": "Concentration, up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Wizard"
+    ],
+    "description": "You conjure an illusory manifestation of a creature's worst fear, visible only to it. It makes a Wisdom save, taking 4d10 Psychic damage and suffering Disadvantage on ability checks and attack rolls for the duration on a failure; on a success it takes half damage and the spell ends. Each turn thereafter the target repeats the save at the end of its turn, taking the Psychic damage again on a failure and ending the spell on a success.",
+    "higherLevel": "The damage increases by 1d10 for each spell slot level above 4.",
+    "tags": [
+      "psychic",
+      "save:WIS",
+      "frightened",
+      "debuff",
+      "concentration"
+    ]
+  },
+  {
+    "name": "Creation",
+    "level": 5,
+    "school": "Illusion",
+    "castingTime": "1 minute",
+    "range": "30 feet",
+    "components": "V, S, M (a paintbrush)",
+    "duration": "Special",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You draw shadow-stuff from the Shadowfell to form a nonliving object of vegetable or mineral matter no larger than a 5-foot cube, in a form and material you have seen. How long it lasts depends on the material used, from 24 hours for vegetable matter down to 1 minute for adamantine or mithral. Any object made this way cannot serve as the material component for another spell.",
+    "higherLevel": "The cube's dimensions increase by 5 feet for each spell slot level above 5.",
+    "tags": [
+      "creation",
+      "utility"
+    ]
+  },
+  {
+    "name": "Dream",
+    "level": 5,
+    "school": "Illusion",
+    "castingTime": "1 minute",
+    "range": "Special",
+    "components": "V, S, M (a handful of sand)",
+    "duration": "8 hours",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You target a creature you know on your plane and designate yourself or a willing touched creature as a dream messenger, who enters an Incapacitated trance with a Speed of 0. If the target is asleep, the messenger appears in its dreams to converse and shape the dream's surroundings; if awake, the messenger can wait until it sleeps. You may make the messenger a nightmare, delivering a short message and forcing a Wisdom save that, on a failure, denies the target any benefit from the rest and deals 3d6 Psychic damage on waking.",
+    "higherLevel": "",
+    "tags": [
+      "psychic",
+      "save:WIS",
+      "utility",
+      "communication"
+    ]
+  },
+  {
+    "name": "Mislead",
+    "level": 5,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "Self",
+    "components": "S",
+    "duration": "Concentration, up to 1 hour",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You become Invisible while an illusory duplicate of yourself appears in your space. The invisibility ends the instant you make an attack roll, deal damage, or cast a spell, but the intangible, invulnerable double lasts for the duration. As a Magic action you can move the double up to twice your Speed and have it gesture, speak, or act however you wish, and you can see and hear through it as though you stood in its place.",
+    "higherLevel": "",
+    "tags": [
+      "invisibility",
+      "utility",
+      "concentration"
+    ]
+  },
+  {
+    "name": "Seeming",
+    "level": 5,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "30 feet",
+    "components": "V, S",
+    "duration": "8 hours",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You give an illusory new appearance to any number of creatures you choose within range, altering their bodies and equipment; an unwilling target can resist with a Charisma save, and one that succeeds cannot be targeted again for 24 hours. You can make each creature seem up to a foot taller or shorter and appear heavier or lighter, though the new form must keep the same basic limb arrangement. The disguise fails physical inspection, and a creature that takes the Study action can make an Intelligence (Investigation) check against your spell save DC to realize a target is disguised.",
+    "higherLevel": "",
+    "tags": [
+      "disguise",
+      "utility",
+      "save:CHA",
+      "save:INT"
+    ]
+  },
+  {
+    "name": "Programmed Illusion",
+    "level": 6,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "120 feet",
+    "components": "V, S, M (jade dust worth 25+ GP)",
+    "duration": "Until dispelled",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Wizard"
+    ],
+    "description": "You place a hidden illusion of an object, creature, or other visible phenomenon, no larger than a 30-foot cube, that stays imperceptible until a trigger of your choosing occurs within 30 feet of it. When triggered, the illusion performs a scripted show of up to 5 minutes with sound, then vanishes and goes dormant for 10 minutes before it can activate again. Passing through the image or taking the Study action to succeed on an Intelligence (Investigation) check against your spell save DC reveals it as illusory.",
+    "higherLevel": "",
+    "tags": [
+      "utility",
+      "trap",
+      "save:INT"
+    ]
+  },
+  {
+    "name": "Mirage Arcane",
+    "level": 7,
+    "school": "Illusion",
+    "castingTime": "10 minutes",
+    "range": "Sight",
+    "components": "V, S",
+    "duration": "10 days",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Druid",
+      "Wizard"
+    ],
+    "description": "You make terrain across an area up to 1 mile square look, sound, smell, and even feel like a wholly different kind of terrain, and you can add or reshape structures though you cannot disguise or add creatures. Because the illusion includes touch, it can turn open ground into Difficult Terrain or vice versa, and any illusory piece removed from the area vanishes at once. Creatures with Truesight perceive the real terrain but can still physically interact with the illusion.",
+    "higherLevel": "",
+    "tags": [
+      "terrain",
+      "utility"
+    ]
+  },
+  {
+    "name": "Project Image",
+    "level": 7,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "500 miles",
+    "components": "V, S, M (a statuette of yourself worth 5+ GP)",
+    "duration": "Concentration, up to 1 day",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Wizard"
+    ],
+    "description": "You create an intangible illusory copy of yourself at any location within range that you have previously seen, ignoring obstacles between you. You can see and hear through the image as if present there, and as a Magic action move it up to 60 feet and have it speak, gesture, and mimic your mannerisms exactly. It vanishes and the spell ends if it takes any damage, and passing through it or a successful Study-action Intelligence (Investigation) check against your spell save DC reveals it as an illusion.",
+    "higherLevel": "",
+    "tags": [
+      "utility",
+      "communication",
+      "concentration",
+      "save:INT"
+    ]
+  },
+  {
+    "name": "Simulacrum",
+    "level": 7,
+    "school": "Illusion",
+    "castingTime": "12 hours",
+    "range": "Touch",
+    "components": "V, S, M (powdered ruby worth 1,500+ GP, which the spell consumes)",
+    "duration": "Until dispelled",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Wizard"
+    ],
+    "description": "You form an icy duplicate of one Beast or Humanoid that remained within 10 feet of you throughout the casting, turning a same-sized pile of snow or ice into a living Construct. The simulacrum uses the original's statistics but is a Construct with half the Hit Point maximum, cannot cast this spell, gains no levels, and takes no rests, obeying you and your designated allies in combat. Restoring its lost Hit Points requires repairing it over a Long Rest using 100 GP of components per point; at 0 Hit Points it melts, and casting the spell again destroys any prior simulacrum.",
+    "higherLevel": "",
+    "tags": [
+      "creation",
+      "summon",
+      "utility"
+    ]
+  },
+  {
+    "name": "Weird",
+    "level": 9,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "120 feet",
+    "components": "V, S",
+    "duration": "Concentration, up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You summon illusory horrors in the minds of creatures of your choice within a 30-foot-radius sphere, forcing each to make a Wisdom save. On a failure a target takes 10d10 Psychic damage and gains the Frightened condition for the duration; on a success it takes half damage only. A Frightened target repeats the Wisdom save at the end of each of its turns, taking 5d10 Psychic damage on a failure and ending the spell on itself on a success.",
+    "higherLevel": "",
+    "tags": [
+      "psychic",
+      "save:WIS",
+      "frightened",
+      "aoe",
+      "concentration"
+    ]
+  }
+]

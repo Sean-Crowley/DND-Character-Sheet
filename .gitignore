@@ -1,0 +1,11 @@
+# dependencies (dev-only tooling for screenshots/tests)
+node_modules/
+
+# dev artifacts
+screenshots/
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini

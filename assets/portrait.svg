@@ -1,0 +1,334 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" role="img" aria-label="Portrait of Kaelaxis, ancient admiral in arcane naval robes">
+  <defs>
+    <!-- Background nebula gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="38%" r="75%">
+      <stop offset="0%" stop-color="#1E1140"/>
+      <stop offset="55%" stop-color="#120A2E"/>
+      <stop offset="100%" stop-color="#0B0620"/>
+    </radialGradient>
+    <!-- Halo behind head -->
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF3DCB" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#7B2FA0" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0B0620" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Skin gradient -->
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C9A9B8"/>
+      <stop offset="45%" stop-color="#A5859A"/>
+      <stop offset="100%" stop-color="#6E5570"/>
+    </linearGradient>
+    <linearGradient id="skinShadow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4A3556"/>
+      <stop offset="100%" stop-color="#4A3556" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Coat / robe gradient -->
+    <linearGradient id="coat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241653"/>
+      <stop offset="60%" stop-color="#170D38"/>
+      <stop offset="100%" stop-color="#0D0726"/>
+    </linearGradient>
+    <linearGradient id="shadowCloak" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0E0826"/>
+      <stop offset="100%" stop-color="#05030F"/>
+    </linearGradient>
+    <linearGradient id="lapel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2E1A63"/>
+      <stop offset="100%" stop-color="#150B34"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE79A"/>
+      <stop offset="50%" stop-color="#FFD447"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E7ECFF"/>
+      <stop offset="100%" stop-color="#8C7FB8"/>
+    </linearGradient>
+    <linearGradient id="eyeGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#35E4FF"/>
+      <stop offset="100%" stop-color="#FF3DCB"/>
+    </linearGradient>
+    <!-- Soft glow filter -->
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="tinyGlow" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="starField" cx="50%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#bgGlow)"/>
+
+  <!-- Distant nebula wisps -->
+  <path d="M0 120 Q120 60 260 130 T400 90 L400 0 L0 0 Z" fill="#1E1140" opacity="0.5"/>
+  <ellipse cx="90" cy="150" rx="160" ry="90" fill="#35E4FF" opacity="0.05" filter="url(#softGlow)"/>
+  <ellipse cx="320" cy="110" rx="130" ry="80" fill="#FF3DCB" opacity="0.06" filter="url(#softGlow)"/>
+
+  <!-- Starfield -->
+  <g fill="#FFFFFF">
+    <circle cx="40" cy="60" r="1.1" opacity="0.8"/>
+    <circle cx="360" cy="40" r="1.4" opacity="0.9"/>
+    <circle cx="300" cy="70" r="0.9" opacity="0.6"/>
+    <circle cx="70" cy="30" r="0.8" opacity="0.5"/>
+    <circle cx="200" cy="20" r="1" opacity="0.7"/>
+    <circle cx="150" cy="55" r="0.7" opacity="0.5"/>
+    <circle cx="380" cy="130" r="0.9" opacity="0.6"/>
+    <circle cx="20" cy="180" r="0.8" opacity="0.5"/>
+    <circle cx="345" cy="200" r="1" opacity="0.6"/>
+    <circle cx="115" cy="90" r="0.6" opacity="0.4"/>
+  </g>
+  <g fill="#35E4FF">
+    <circle cx="55" cy="110" r="1.2" opacity="0.7"/>
+    <circle cx="330" cy="150" r="1" opacity="0.6"/>
+  </g>
+  <g fill="#FF3DCB">
+    <circle cx="250" cy="45" r="1.1" opacity="0.7"/>
+    <circle cx="30" cy="230" r="1" opacity="0.5"/>
+  </g>
+
+  <!-- The two massive ships in the void behind him -->
+  <g opacity="0.85">
+    <!-- Ship 1 (left) -->
+    <g filter="url(#tinyGlow)">
+      <path d="M15 300 L120 288 L150 296 L120 306 L15 312 Z" fill="#160C36" stroke="#FFD447" stroke-width="0.8" stroke-opacity="0.55"/>
+      <path d="M40 292 L110 288 L108 296 L40 298 Z" fill="#241653" opacity="0.8"/>
+      <line x1="60" y1="298" x2="140" y2="300" stroke="#35E4FF" stroke-width="0.6" opacity="0.7"/>
+      <circle cx="118" cy="297" r="1.4" fill="#35E4FF"/>
+      <circle cx="95" cy="294" r="0.9" fill="#FFD447"/>
+      <circle cx="75" cy="296" r="0.9" fill="#FF3DCB"/>
+      <path d="M120 296 L150 296 L138 300 Z" fill="#FF3DCB" opacity="0.5"/>
+    </g>
+    <!-- Ship 2 (right) -->
+    <g filter="url(#tinyGlow)">
+      <path d="M385 340 L275 325 L245 333 L275 344 L385 355 Z" fill="#160C36" stroke="#FFD447" stroke-width="0.8" stroke-opacity="0.55"/>
+      <path d="M360 330 L290 326 L292 336 L360 340 Z" fill="#241653" opacity="0.8"/>
+      <line x1="340" y1="336" x2="260" y2="335" stroke="#35E4FF" stroke-width="0.6" opacity="0.7"/>
+      <circle cx="282" cy="334" r="1.4" fill="#FF3DCB"/>
+      <circle cx="305" cy="331" r="0.9" fill="#35E4FF"/>
+      <circle cx="325" cy="335" r="0.9" fill="#FFD447"/>
+      <path d="M275 334 L245 333 L258 337 Z" fill="#35E4FF" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- Halo glow behind head -->
+  <circle cx="200" cy="185" r="130" fill="url(#halo)" filter="url(#softGlow)"/>
+
+  <!-- ===== FIGURE ===== -->
+
+  <!-- Shadow cloak (outermost, rising like smoke over shoulders) -->
+  <path d="M200 250
+           C120 250 70 300 55 380
+           C48 420 50 500 50 500
+           L350 500
+           C350 500 352 420 345 380
+           C330 300 280 250 200 250 Z"
+        fill="url(#shadowCloak)"/>
+  <!-- Cloak tendrils -->
+  <path d="M60 380 C70 340 90 320 120 340 C100 360 95 400 100 460 L70 470 C60 430 55 405 60 380 Z" fill="#08041A" opacity="0.9"/>
+  <path d="M340 380 C330 340 310 320 280 340 C300 360 305 400 300 460 L330 470 C340 430 345 405 340 380 Z" fill="#08041A" opacity="0.9"/>
+  <path d="M150 470 C140 420 150 380 170 360 L175 500 L140 500 Z" fill="#0A0522" opacity="0.6"/>
+  <path d="M250 470 C260 420 250 380 230 360 L225 500 L260 500 Z" fill="#0A0522" opacity="0.6"/>
+
+  <!-- Admiral coat body -->
+  <path d="M200 262
+           C150 262 118 300 108 360
+           C102 400 105 500 105 500
+           L295 500
+           C295 500 298 400 292 360
+           C282 300 250 262 200 262 Z"
+        fill="url(#coat)"/>
+
+  <!-- Coat lapels -->
+  <path d="M200 268 L150 320 L165 430 L200 360 Z" fill="url(#lapel)"/>
+  <path d="M200 268 L250 320 L235 430 L200 360 Z" fill="url(#lapel)"/>
+  <!-- Lapel gold trim -->
+  <path d="M200 268 L150 320 L165 430" fill="none" stroke="url(#gold)" stroke-width="2.2" opacity="0.95"/>
+  <path d="M200 268 L250 320 L235 430" fill="none" stroke="url(#gold)" stroke-width="2.2" opacity="0.95"/>
+  <!-- Center seam -->
+  <path d="M200 300 L200 500" stroke="#FFD447" stroke-width="1" opacity="0.4"/>
+
+  <!-- Epaulettes (admiral shoulders) -->
+  <g filter="url(#glow)">
+    <path d="M118 300 Q108 290 118 282 L165 300 Q160 320 150 322 Z" fill="url(#gold)"/>
+    <path d="M282 300 Q292 290 282 282 L235 300 Q240 320 250 322 Z" fill="url(#gold)"/>
+  </g>
+  <!-- Epaulette fringe -->
+  <g stroke="url(#gold)" stroke-width="1.6" opacity="0.9">
+    <line x1="122" y1="318" x2="120" y2="336"/>
+    <line x1="132" y1="320" x2="131" y2="340"/>
+    <line x1="142" y1="322" x2="142" y2="342"/>
+    <line x1="278" y1="318" x2="280" y2="336"/>
+    <line x1="268" y1="320" x2="269" y2="340"/>
+    <line x1="258" y1="322" x2="258" y2="342"/>
+  </g>
+
+  <!-- Gold coat buttons -->
+  <g fill="url(#gold)" filter="url(#tinyGlow)">
+    <circle cx="188" cy="360" r="3.4"/>
+    <circle cx="188" cy="390" r="3.4"/>
+    <circle cx="188" cy="420" r="3.4"/>
+    <circle cx="212" cy="360" r="3.4"/>
+    <circle cx="212" cy="390" r="3.4"/>
+    <circle cx="212" cy="420" r="3.4"/>
+  </g>
+
+  <!-- Arcane robe embroidery (glowing runes on the coat) -->
+  <g stroke="#35E4FF" stroke-width="1.2" fill="none" opacity="0.75" filter="url(#tinyGlow)">
+    <path d="M140 400 q10 -14 20 0 q10 14 20 0"/>
+    <path d="M260 400 q-10 -14 -20 0 q-10 14 -20 0"/>
+    <circle cx="150" cy="450" r="8"/>
+    <circle cx="250" cy="450" r="8"/>
+    <path d="M150 442 L150 458 M142 450 L158 450"/>
+    <path d="M250 442 L250 458 M242 450 L258 450"/>
+  </g>
+  <g stroke="#FF3DCB" stroke-width="1" fill="none" opacity="0.6" filter="url(#tinyGlow)">
+    <path d="M125 470 q15 -10 30 0"/>
+    <path d="M275 470 q-15 -10 -30 0"/>
+  </g>
+
+  <!-- High collar with cloak clasp -->
+  <path d="M172 270 L200 300 L228 270 L222 250 L178 250 Z" fill="#1A0F3E"/>
+  <path d="M172 270 L200 300 L228 270" fill="none" stroke="url(#gold)" stroke-width="1.8"/>
+  <!-- Cloak clasp gem -->
+  <circle cx="200" cy="278" r="6" fill="url(#eyeGlow)" filter="url(#glow)"/>
+  <circle cx="200" cy="278" r="9" fill="none" stroke="url(#gold)" stroke-width="1.6"/>
+
+  <!-- Neck -->
+  <path d="M182 232 L182 262 Q200 274 218 262 L218 232 Z" fill="url(#skin)"/>
+  <path d="M182 232 L182 262 Q191 268 200 268 L200 232 Z" fill="url(#skinShadow)" opacity="0.5"/>
+
+  <!-- HEAD -->
+  <g>
+    <!-- Face base -->
+    <path d="M200 90
+             C165 90 148 118 148 158
+             C148 200 168 236 200 240
+             C232 236 252 200 252 158
+             C252 118 235 90 200 90 Z"
+          fill="url(#skin)"/>
+    <!-- Cheek / jaw shading -->
+    <path d="M200 90 C165 90 148 118 148 158 C148 200 168 236 200 240 L200 90 Z" fill="url(#skinShadow)" opacity="0.35"/>
+    <!-- Cheekbone highlight -->
+    <ellipse cx="172" cy="168" rx="12" ry="18" fill="#D8C0CC" opacity="0.25"/>
+    <ellipse cx="228" cy="168" rx="12" ry="18" fill="#D8C0CC" opacity="0.2"/>
+
+    <!-- Forehead worry lines (ancient beneath youth) -->
+    <g stroke="#5A4360" stroke-width="0.9" opacity="0.5" fill="none">
+      <path d="M172 122 q28 -8 56 0"/>
+      <path d="M170 130 q30 -7 60 0"/>
+    </g>
+
+    <!-- Brows, heavy -->
+    <path d="M162 150 q18 -12 38 -4" stroke="#7A6E9E" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M238 150 q-18 -12 -38 -4" stroke="#7A6E9E" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+    <!-- Heavy weary eyes: hooded lids, bags -->
+    <!-- eye sockets shadow -->
+    <ellipse cx="178" cy="164" rx="16" ry="10" fill="#3E2C4A" opacity="0.55"/>
+    <ellipse cx="222" cy="164" rx="16" ry="10" fill="#3E2C4A" opacity="0.55"/>
+    <!-- upper hooded lid -->
+    <path d="M164 160 q14 -6 28 2" fill="none" stroke="#4A3556" stroke-width="1.4"/>
+    <path d="M236 160 q-14 -6 -28 2" fill="none" stroke="#4A3556" stroke-width="1.4"/>
+    <!-- eye whites (small, tired, half-open) -->
+    <path d="M167 166 q11 -5 22 1 q-11 6 -22 -1 Z" fill="#2A2038"/>
+    <path d="M211 167 q11 -6 22 -1 q-11 6 -22 1 Z" fill="#2A2038"/>
+    <!-- glowing irises -->
+    <circle cx="178" cy="166" r="4.6" fill="url(#eyeGlow)" filter="url(#glow)"/>
+    <circle cx="222" cy="166" r="4.6" fill="url(#eyeGlow)" filter="url(#glow)"/>
+    <circle cx="178" cy="166" r="2" fill="#0B0620"/>
+    <circle cx="222" cy="166" r="2" fill="#0B0620"/>
+    <!-- eye-bags / weariness -->
+    <path d="M166 174 q12 4 24 0" fill="none" stroke="#4A3556" stroke-width="1" opacity="0.7"/>
+    <path d="M210 174 q12 4 24 0" fill="none" stroke="#4A3556" stroke-width="1" opacity="0.7"/>
+    <!-- crow's feet -->
+    <g stroke="#5A4360" stroke-width="0.7" opacity="0.5" fill="none">
+      <path d="M158 162 l-8 -3 M158 166 l-9 0 M158 170 l-8 3"/>
+      <path d="M242 162 l8 -3 M242 166 l9 0 M242 170 l8 3"/>
+    </g>
+
+    <!-- Nose -->
+    <path d="M200 168 L194 196 q6 6 12 0 Z" fill="url(#skin)"/>
+    <path d="M194 196 q6 6 12 0" fill="none" stroke="#4A3556" stroke-width="1" opacity="0.6"/>
+    <path d="M200 170 L200 194" stroke="#5A4360" stroke-width="0.8" opacity="0.4"/>
+
+    <!-- Nasolabial lines -->
+    <path d="M188 198 q-8 8 -6 18" fill="none" stroke="#5A4360" stroke-width="0.8" opacity="0.4"/>
+    <path d="M212 198 q8 8 6 18" fill="none" stroke="#5A4360" stroke-width="0.8" opacity="0.4"/>
+
+    <!-- Mouth, set grimly -->
+    <path d="M184 212 q16 6 32 0" fill="none" stroke="#4A2C40" stroke-width="2" stroke-linecap="round"/>
+    <path d="M186 210 q14 -3 28 0" fill="none" stroke="#7A5468" stroke-width="1.4" opacity="0.6"/>
+
+    <!-- Silver goatee / stubble -->
+    <path d="M186 218 q14 14 28 0 q-2 16 -14 22 q-12 -6 -14 -22 Z" fill="#B8AECF" opacity="0.55"/>
+    <g stroke="#CBD3F0" stroke-width="0.5" opacity="0.5">
+      <path d="M180 208 q4 6 3 12"/>
+      <path d="M220 208 q-4 6 -3 12"/>
+    </g>
+  </g>
+
+  <!-- Silver-white hair, swept back, receding -->
+  <path d="M150 156
+           C144 110 168 78 200 78
+           C232 78 256 110 250 156
+           C250 130 236 108 200 108
+           C164 108 150 130 150 156 Z"
+        fill="url(#hair)"/>
+  <path d="M150 156 C146 128 158 104 178 96 C168 108 160 130 162 156 Z" fill="#DDE4FF" opacity="0.5"/>
+  <!-- side/temple hair -->
+  <path d="M148 158 C142 150 142 180 152 200 C150 180 150 168 155 160 Z" fill="url(#hair)"/>
+  <path d="M252 158 C258 150 258 180 248 200 C250 180 250 168 245 160 Z" fill="url(#hair)"/>
+  <!-- hair strand highlights -->
+  <g stroke="#F0F3FF" stroke-width="0.7" opacity="0.55" fill="none">
+    <path d="M168 96 q30 -12 62 4"/>
+    <path d="M162 108 q38 -14 76 2"/>
+  </g>
+
+  <!-- Cloak hood shadow arcing over head (stealthy) -->
+  <path d="M138 168 C120 110 160 60 200 58 C240 60 280 110 262 168
+           C268 120 240 82 200 82 C160 82 132 120 138 168 Z"
+        fill="#07041A" opacity="0.85"/>
+  <path d="M138 168 C120 110 160 60 200 58 C240 60 280 110 262 168"
+        fill="none" stroke="url(#gold)" stroke-width="1.4" opacity="0.5"/>
+
+  <!-- Rim light on face edges (cyan / magenta chromatic) -->
+  <path d="M148 158 C148 200 168 236 200 240" fill="none" stroke="#35E4FF" stroke-width="1.6" opacity="0.35" filter="url(#tinyGlow)"/>
+  <path d="M252 158 C252 200 232 236 200 240" fill="none" stroke="#FF3DCB" stroke-width="1.6" opacity="0.35" filter="url(#tinyGlow)"/>
+
+  <!-- Floating arcane motes around him -->
+  <g filter="url(#tinyGlow)">
+    <circle cx="110" cy="240" r="2.2" fill="#35E4FF" opacity="0.8"/>
+    <circle cx="95" cy="270" r="1.5" fill="#FFD447" opacity="0.7"/>
+    <circle cx="300" cy="235" r="2.2" fill="#FF3DCB" opacity="0.8"/>
+    <circle cx="312" cy="268" r="1.6" fill="#35E4FF" opacity="0.7"/>
+    <circle cx="128" cy="215" r="1.3" fill="#FFD447" opacity="0.6"/>
+    <circle cx="278" cy="212" r="1.3" fill="#FFD447" opacity="0.6"/>
+  </g>
+
+  <!-- Subtle vignette -->
+  <rect width="400" height="500" fill="url(#starField)"/>
+  <path d="M0 0 H400 V500 H0 Z" fill="none"/>
+  <rect x="0" y="0" width="400" height="500" fill="#0B0620" opacity="0" />
+  <radialGradient id="vig" cx="50%" cy="45%" r="75%">
+    <stop offset="60%" stop-color="#0B0620" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+  </radialGradient>
+  <rect width="400" height="500" fill="url(#vig)"/>
+</svg>

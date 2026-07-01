@@ -1,0 +1,554 @@
+[
+  {
+    "name": "Minor Illusion",
+    "level": 0,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "30 feet",
+    "components": "S, M (a bit of fleece)",
+    "duration": "1 minute",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You conjure either a sound or a static visual image no larger than a 5-foot cube within range, lasting for the duration. A sound can be as loud as a scream or as faint as a whisper, while an object appears real but doesn't produce sound, light, smell, or other sensory effects. A creature that studies the image with an Action can attempt an Investigation check against your spell save DC to discern the illusion, causing it to fade for that creature.",
+    "higherLevel": "",
+    "tags": [
+      "illusion",
+      "investigation-check"
+    ]
+  },
+  {
+    "name": "Shocking Grasp",
+    "level": 0,
+    "school": "Evocation",
+    "castingTime": "Action",
+    "range": "Touch",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "Lightning arcs from your hand at a creature you touch, and you make a melee spell attack against it. You have Advantage on the roll if the target is wearing metal armor. On a hit, the target takes 1d8 Lightning damage and can't take Reactions until the start of its next turn.",
+    "higherLevel": "The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).",
+    "tags": [
+      "lightning",
+      "attack"
+    ]
+  },
+  {
+    "name": "Sorcerous Burst",
+    "level": 0,
+    "school": "Evocation",
+    "castingTime": "Action",
+    "range": "120 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer"
+    ],
+    "description": "You hurl sorcerous energy at a target within range, making a ranged spell attack. On a hit, it takes 1d8 damage of a type you choose from acid, cold, fire, lightning, poison, psychic, or thunder. If you roll an 8 on any of the spell's damage dice, you can roll one additional d8 of the same type and add it, though the number of extra dice you can gain this way can't exceed your spellcasting ability modifier (minimum of one).",
+    "higherLevel": "The base damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).",
+    "tags": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "poison",
+      "psychic",
+      "thunder",
+      "attack"
+    ]
+  },
+  {
+    "name": "Mage Hand",
+    "level": 0,
+    "school": "Conjuration",
+    "castingTime": "Action",
+    "range": "30 feet",
+    "components": "V, S",
+    "duration": "1 minute",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "A spectral floating hand appears at a point you choose within range and lasts for the duration or until you dismiss it as an Action. The hand vanishes if it ever moves more than 30 feet from you or if you cast the spell again. As a Magic action you can control the hand to manipulate objects, open unlocked containers or doors, or retrieve items, moving it up to 30 feet each time; it can't attack, activate magic items, or carry more than 10 pounds.",
+    "higherLevel": "",
+    "tags": [
+      "utility"
+    ]
+  },
+  {
+    "name": "Prestidigitation",
+    "level": 0,
+    "school": "Transmutation",
+    "castingTime": "Action",
+    "range": "10 feet",
+    "components": "V, S",
+    "duration": "Up to 1 hour",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You perform a minor magical trick within range, such as creating a harmless sensory effect, instantly lighting or snuffing a small flame, cleaning or soiling an object, chilling or warming up to a cubic foot of nonliving material, or producing a trinket or illusory mark that lasts until the end of your next turn. You can have up to three of the spell's non-instantaneous effects active at once, and can dismiss any one of them as an Action.",
+    "higherLevel": "",
+    "tags": [
+      "utility"
+    ]
+  },
+  {
+    "name": "Mind Sliver",
+    "level": 0,
+    "school": "Enchantment",
+    "castingTime": "Action",
+    "range": "60 feet",
+    "components": "V",
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You drive a spike of psychic energy into the mind of one creature you can see within range, forcing it to make an Intelligence saving throw. On a failed save, it takes 1d6 Psychic damage and subtracts 1d4 from its next saving throw made before the end of your next turn.",
+    "higherLevel": "The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6).",
+    "tags": [
+      "psychic",
+      "save:INT"
+    ]
+  },
+  {
+    "name": "Mage Armor",
+    "level": 1,
+    "school": "Abjuration",
+    "castingTime": "Action",
+    "range": "Touch",
+    "components": "V, S, M (a piece of cured leather)",
+    "duration": "8 hours",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You touch a willing creature that isn't wearing armor and surround it with protective magical force. Until the spell ends, the target's base Armor Class becomes 13 plus its Dexterity modifier. The spell ends early if the target dons armor.",
+    "higherLevel": "",
+    "tags": [
+      "buff",
+      "armor-class"
+    ]
+  },
+  {
+    "name": "Shield",
+    "level": 1,
+    "school": "Abjuration",
+    "castingTime": "Reaction, which you take in response to being hit by an attack or targeted by Magic Missile",
+    "range": "Self",
+    "components": "V, S",
+    "duration": "1 round",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "An invisible barrier of force springs into being to protect you. Until the start of your next turn, you gain a +5 bonus to Armor Class, including against the triggering attack, and you take no damage from Magic Missile. The bonus applies even to attacks that would otherwise have hit you.",
+    "higherLevel": "",
+    "tags": [
+      "buff",
+      "armor-class",
+      "reaction"
+    ]
+  },
+  {
+    "name": "Chromatic Orb",
+    "level": 1,
+    "school": "Evocation",
+    "castingTime": "Action",
+    "range": "90 feet",
+    "components": "V, S, M (a diamond worth 50+ GP)",
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You hurl a sphere of energy at a target within range, choosing one damage type from acid, cold, fire, lightning, poison, or thunder as you cast, then making a ranged spell attack. On a hit, the target takes 3d8 damage of the chosen type, and the orb can bounce to a new target: if there's another creature within 30 feet of the original, you can make a new attack against it, and it continues to leap so long as each new target is within 30 feet of the previous one and hasn't already been struck by this casting.",
+    "higherLevel": "The damage increases by 1d8 for each spell slot level above 1.",
+    "tags": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "poison",
+      "thunder",
+      "attack"
+    ]
+  },
+  {
+    "name": "Hold Person",
+    "level": 2,
+    "school": "Enchantment",
+    "castingTime": "Action",
+    "range": "60 feet",
+    "components": "V, S, M (a straight piece of iron)",
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "Choose a Humanoid you can see within range and force it to make a Wisdom saving throw; on a failure it has the Paralyzed condition for the duration. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success. While Paralyzed the target is Incapacitated, can't move, automatically fails Strength and Dexterity saves, and attacks against it have Advantage with any hit within 5 feet being a critical hit.",
+    "higherLevel": "You can target one additional Humanoid for each spell slot level above 2.",
+    "tags": [
+      "control",
+      "save:WIS",
+      "paralyzed"
+    ]
+  },
+  {
+    "name": "Knock",
+    "level": 2,
+    "school": "Transmutation",
+    "castingTime": "Action",
+    "range": "60 feet",
+    "components": "V",
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You point at an object within range that can be opened, such as a door, chest, or a set of manacles. If it is held shut by a mundane lock, is stuck, or is barred, it becomes unlocked, unstuck, or unbarred, and any one nonmagical lock or the effect of an Arcane Lock on it is suppressed for 10 minutes. The spell produces a loud knock, audible from up to 300 feet away.",
+    "higherLevel": "",
+    "tags": [
+      "utility"
+    ]
+  },
+  {
+    "name": "Phantasmal Force",
+    "level": 2,
+    "school": "Illusion",
+    "castingTime": "Action",
+    "range": "60 feet",
+    "components": "V, S, M (a bit of fleece)",
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You craft an illusion in the mind of a creature you can see within range that fails an Intelligence saving throw, creating a phantasmal object, creature, or hazard no larger than a 10-foot cube that only that target perceives as real. The target rationalizes any illogical outcomes, and if the phantasm is something dangerous it can deal 1d6 Psychic damage to the target each of the target's turns if the illusion is within 5 feet. The target can repeat the save as an Action after using logic to examine the illusion, ending the effect on a success.",
+    "higherLevel": "",
+    "tags": [
+      "illusion",
+      "psychic",
+      "save:INT"
+    ]
+  },
+  {
+    "name": "Suggestion",
+    "level": 2,
+    "school": "Enchantment",
+    "castingTime": "Action",
+    "range": "30 feet",
+    "components": "V, M (a drop of honey)",
+    "duration": "Up to 8 hours",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You verbally suggest a reasonable course of action in one or two sentences to a creature you can see within range that can hear and understand you, and it must succeed on a Wisdom saving throw or pursue that activity for the duration. The suggestion must sound achievable and not obviously harmful, or the spell fails. The effect ends if the target completes the suggested action or if it takes any damage.",
+    "higherLevel": "",
+    "tags": [
+      "control",
+      "save:WIS",
+      "charmed"
+    ]
+  },
+  {
+    "name": "Scorching Ray",
+    "level": 2,
+    "school": "Evocation",
+    "castingTime": "Action",
+    "range": "120 feet",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You create three rays of fire and hurl them at targets within range, distributing the rays among one or more creatures as you choose. Make a separate ranged spell attack for each ray, and on a hit that ray deals 2d6 Fire damage to its target.",
+    "higherLevel": "You create one additional ray for each spell slot level above 2.",
+    "tags": [
+      "fire",
+      "attack"
+    ]
+  },
+  {
+    "name": "Haste",
+    "level": 3,
+    "school": "Transmutation",
+    "castingTime": "Action",
+    "range": "30 feet",
+    "components": "V, S, M (a shaving of licorice root)",
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You target a willing creature you can see within range, doubling its Speed and granting a +2 bonus to AC, Advantage on Dexterity saving throws, and an extra action each turn that can be used only to Attack (one attack), Dash, Disengage, Hide, or Utilize. When the spell ends, the target is Incapacitated and has a Speed of 0 until the end of its next turn as a wave of lethargy washes over it.",
+    "higherLevel": "",
+    "tags": [
+      "buff",
+      "speed"
+    ]
+  },
+  {
+    "name": "Fireball",
+    "level": 3,
+    "school": "Evocation",
+    "castingTime": "Action",
+    "range": "150 feet",
+    "components": "V, S, M (a ball of bat guano and sulfur)",
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "A bright streak flashes to a point you choose within range and erupts into a 20-foot-radius sphere of flame. Each creature in the area must make a Dexterity saving throw, taking 8d6 Fire damage on a failed save or half as much on a success. Flammable objects in the area that aren't being worn or carried catch fire.",
+    "higherLevel": "The damage increases by 1d6 for each spell slot level above 3.",
+    "tags": [
+      "fire",
+      "save:DEX",
+      "area"
+    ]
+  },
+  {
+    "name": "Banishment",
+    "level": 4,
+    "school": "Abjuration",
+    "castingTime": "Action",
+    "range": "60 feet",
+    "components": "V, S, M (an item distasteful to the target)",
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Cleric",
+      "Paladin",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You attempt to send one creature you can see within range to another plane of existence, and it must succeed on a Charisma saving throw or be banished. If the target is native to the plane you're on, it vanishes into a harmless demiplane and reappears in the space it left when the spell ends; if it isn't native and the spell lasts the full minute, it is banished permanently.",
+    "higherLevel": "You can target one additional creature for each spell slot level above 4.",
+    "tags": [
+      "control",
+      "save:CHA",
+      "banishment"
+    ]
+  },
+  {
+    "name": "Hold Monster",
+    "level": 5,
+    "school": "Enchantment",
+    "castingTime": "Action",
+    "range": "90 feet",
+    "components": "V, S, M (a straight piece of iron)",
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "Choose a creature you can see within range that isn't a Undead and force it to make a Wisdom saving throw; on a failure it has the Paralyzed condition for the duration. At the end of each of its turns the target repeats the save, ending the effect on itself on a success. While Paralyzed the target is Incapacitated, can't move, automatically fails Strength and Dexterity saves, and attacks against it have Advantage with any hit within 5 feet being a critical hit.",
+    "higherLevel": "You can target one additional creature for each spell slot level above 5.",
+    "tags": [
+      "control",
+      "save:WIS",
+      "paralyzed"
+    ]
+  },
+  {
+    "name": "Animate Objects",
+    "level": 5,
+    "school": "Transmutation",
+    "castingTime": "Action",
+    "range": "120 feet",
+    "components": "V, S",
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You bring to life as many as ten nonmagical objects that aren't being worn or carried within range, each no larger than Medium, animating Tiny and Small objects while combining larger ones into fewer, stronger constructs (a Large object counts as two, a Huge as four). As a Bonus Action you can mentally command any of the animated objects that are within 500 feet to move and take the Attack action, and each has statistics based on its size. The objects remain animated for the duration, until reduced to 0 Hit Points, or until you dismiss one as a Bonus Action.",
+    "higherLevel": "The number of Huge or smaller targets you can animate scales such that you animate two additional Small/Medium-equivalent objects (or their larger equivalents) for each spell slot level above 5.",
+    "tags": [
+      "summon",
+      "force",
+      "attack"
+    ]
+  },
+  {
+    "name": "Chain Lightning",
+    "level": 6,
+    "school": "Evocation",
+    "castingTime": "Action",
+    "range": "150 feet",
+    "components": "V, S, M (three silver pins)",
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You launch a bolt of lightning at a target you can see within range, which then arcs to as many as three additional targets you choose that are each within 30 feet of the first and that you can see. A target can be a creature or an object and can be selected only once by this spell. Each target makes a Dexterity saving throw, taking 10d8 Lightning damage on a failed save or half as much on a success.",
+    "higherLevel": "One additional bolt leaps from the first target to another target for each spell slot level above 6.",
+    "tags": [
+      "lightning",
+      "save:DEX"
+    ]
+  },
+  {
+    "name": "Disintegrate",
+    "level": 6,
+    "school": "Transmutation",
+    "castingTime": "Action",
+    "range": "60 feet",
+    "components": "V, S, M (a lodestone and dust)",
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "A thin green ray springs from your finger at a target you can see within range, which makes a Dexterity saving throw. On a failure the target takes 10d6 + 40 Force damage, and if this reduces it to 0 Hit Points it and everything it's wearing and carrying (except magic items) is disintegrated into fine gray dust, leaving only a creature that can be restored by True Resurrection or Wish. The spell can also automatically destroy a Large or smaller nonmagical object or a creation of magical force.",
+    "higherLevel": "The damage increases by 3d6 for each spell slot level above 6.",
+    "tags": [
+      "force",
+      "save:DEX"
+    ]
+  },
+  {
+    "name": "Arcane Gate",
+    "level": 6,
+    "school": "Conjuration",
+    "castingTime": "Action",
+    "range": "500 feet",
+    "components": "V, S",
+    "duration": "Up to 10 minutes",
+    "concentration": true,
+    "ritual": false,
+    "classes": [
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "description": "You create two linked teleportation portals, each a 10-foot-diameter ring, on solid surfaces you can see within range (one within 10 feet of you). Any creature or object that enters one portal exits from the other as though the two were adjacent, and only you can change which surface of a portal is the active one as a Bonus Action. The portals last for the duration.",
+    "higherLevel": "",
+    "tags": [
+      "teleportation",
+      "utility"
+    ]
+  },
+  {
+    "name": "Prismatic Spray",
+    "level": 7,
+    "school": "Evocation",
+    "castingTime": "Action",
+    "range": "Self (60-foot cone)",
+    "components": "V, S",
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "Eight rays of shimmering colored light flash from you in a 60-foot cone, and each creature in the area makes a Dexterity saving throw. For each affected creature, roll 1d8 to determine which colored ray strikes it: red, orange, yellow, green, blue, or indigo deals 12d6 damage of the corresponding type (Fire, Acid, Lightning, Poison, Cold, or Psychic) with a failed save applying a harsher effect such as Restrained or Blinded, violet can Blind and banish the creature to another plane on a failed save, and an 8 means it's struck by two rays.",
+    "higherLevel": "",
+    "tags": [
+      "fire",
+      "acid",
+      "lightning",
+      "poison",
+      "cold",
+      "psychic",
+      "save:DEX",
+      "area",
+      "restrained",
+      "blinded"
+    ]
+  },
+  {
+    "name": "Teleport",
+    "level": 7,
+    "school": "Conjuration",
+    "castingTime": "Action",
+    "range": "10 feet",
+    "components": "V",
+    "duration": "Instantaneous",
+    "concentration": false,
+    "ritual": false,
+    "classes": [
+      "Bard",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "description": "You instantly transport yourself and up to eight willing creatures of your choice within 10 feet, or a single object, to a destination you specify on the same plane of existence. Accuracy depends on how well you know the target location, from a permanent teleportation circle to a place merely described to you. Roll on the spell's arrival table using your familiarity: you may arrive on target, land a distance off target, end up in a similar area, or suffer a mishap that deals 3d10 Force damage and scatters the group.",
+    "higherLevel": "",
+    "tags": [
+      "teleportation",
+      "force",
+      "utility"
+    ]
+  }
+]
